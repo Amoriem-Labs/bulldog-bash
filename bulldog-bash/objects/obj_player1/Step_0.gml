@@ -17,8 +17,8 @@ else
 	}
 }
 
-key_right = keyboard_check(vk_right);
-key_left = keyboard_check(vk_left);
+key_right = keyboard_check(ord("D"));
+key_left = keyboard_check(ord("A"));
 
 hspeed = (key_right - key_left) * horizontal_speed;
 
