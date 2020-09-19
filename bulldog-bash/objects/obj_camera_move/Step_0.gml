@@ -11,5 +11,7 @@ v_speed = 10;
 h_move = k_right - k_left;
 v_move = k_down - k_up;
 
-view_xport[0] -= h_speed * h_move;
-view_yport[0] -= v_speed * v_move;
+cam_x += h_move * h_speed;
+cam_y += v_move * v_speed;
+
+camera_set_view_pos(view_camera[0], cam_x, cam_y);
