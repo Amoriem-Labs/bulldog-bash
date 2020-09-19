@@ -13,6 +13,6 @@ if (keyboard_check(vk_space) && stretch > 0) {
 	h_other -= sprite_get_width(spr_topbar_green_left) / 10;
 	};
 
-draw_sprite_stre(spr_topbar_green_left, 0, h_centre - h_offset + h_other, v_offset, stretch, 1, 0, c_white, 1);
+draw_sprite_ext(spr_topbar_green_left, 0, h_centre - h_offset + h_other, v_offset, stretch, 1, 0, c_white, 1);
 
 
