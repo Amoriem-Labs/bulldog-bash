@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_topbar_green_left",
-    "path": "sprites/spr_topbar_green_left/spr_topbar_green_left.yy",
+    "name": "spr_floor",
+    "path": "sprites/spr_floor/spr_floor.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "floor",
-    "path": "folders/Objects/floor.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_floor",

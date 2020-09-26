@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if (!place_meeting(x, y + 1, obj_floor))
+if (!place_meeting(x, y , obj_floor))
 {
 	gravity = grv;
 }
