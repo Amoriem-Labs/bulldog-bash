@@ -8,9 +8,12 @@
     {"id":{"name":"spr_old_campus_noui","path":"sprites/spr_old_campus_noui/spr_old_campus_noui.yy",},"order":1,},
     {"id":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"order":3,},
     {"id":{"name":"spr_topbar","path":"sprites/spr_topbar/spr_topbar.yy",},"order":0,},
+    {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},"order":0,},
     {"id":{"name":"spr_topbar_green_left","path":"sprites/spr_topbar_green_left/spr_topbar_green_left.yy",},"order":2,},
+    {"id":{"name":"Menu_page","path":"rooms/Menu_page/Menu_page.yy",},"order":0,},
+    {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":2,},
     {"id":{"name":"obj_camera_move","path":"objects/obj_camera_move/obj_camera_move.yy",},"order":1,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -26,6 +29,7 @@
     "children": [],
   },
   "RoomOrder": [
+    {"name":"Menu_page","path":"rooms/Menu_page/Menu_page.yy",},
     {"name":"Room1","path":"rooms/Room1/Room1.yy",},
   ],
   "Folders": [
