@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_chun_walk_bw","path":"sprites/spr_chun_walk_bw/spr_chun_walk_bw.yy",},"order":9,},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},"order":5,},
     {"id":{"name":"spr_topbar_green_right","path":"sprites/spr_topbar_green_right/spr_topbar_green_right.yy",},"order":3,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":4,},
