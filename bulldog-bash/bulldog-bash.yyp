@@ -10,6 +10,7 @@
     {"id":{"name":"spr_topbar","path":"sprites/spr_topbar/spr_topbar.yy",},"order":0,},
     {"id":{"name":"spr_topbar_green_left","path":"sprites/spr_topbar_green_left/spr_topbar_green_left.yy",},"order":2,},
     {"id":{"name":"obj_camera_move","path":"objects/obj_camera_move/obj_camera_move.yy",},"order":1,},
+    {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":5,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
