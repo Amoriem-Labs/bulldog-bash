@@ -6,6 +6,7 @@
     {"id":{"name":"obj_gui_draw_topbar","path":"objects/obj_gui_draw_topbar/obj_gui_draw_topbar.yy",},"order":0,},
     {"id":{"name":"spr_chun_idle","path":"sprites/spr_chun_idle/spr_chun_idle.yy",},"order":3,},
     {"id":{"name":"spr_old_campus_noui","path":"sprites/spr_old_campus_noui/spr_old_campus_noui.yy",},"order":1,},
+    {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":5,},
     {"id":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"order":3,},
     {"id":{"name":"spr_topbar","path":"sprites/spr_topbar/spr_topbar.yy",},"order":0,},
     {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},"order":0,},
