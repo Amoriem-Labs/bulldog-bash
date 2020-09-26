@@ -18,9 +18,14 @@
     {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":6,},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":2,},
     {"id":{"name":"obj_camera_move","path":"objects/obj_camera_move/obj_camera_move.yy",},"order":1,},
+<<<<<<< HEAD
     {"id":{"name":"spr_chun_kick","path":"sprites/spr_chun_kick/spr_chun_kick.yy",},"order":5,},
     {"id":{"name":"spr_chun_walk_fw","path":"sprites/spr_chun_walk_fw/spr_chun_walk_fw.yy",},"order":8,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
+=======
+    {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":5,},
+    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+>>>>>>> 3947033d3c4cc9895bd7beae5a07d5115dd3bbc1
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
