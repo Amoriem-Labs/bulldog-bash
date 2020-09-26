@@ -5,11 +5,13 @@ k_right = keyboard_check(vk_right);
 k_up = keyboard_check(vk_up);
 k_down = keyboard_check(vk_down);
 
-h_speed = 1;
-v_speed = 1; 
+h_speed = 10;
+v_speed = 10; 
 
 h_move = k_right - k_left;
 v_move = k_down - k_up;
 
-camera_set_view_pos(0, h_move * h_speed, v_move * v_speed);
+cam_x += h_move * h_speed;
+cam_y += v_move * v_speed;
 
+camera_set_view_pos(view_camera[0], cam_x + obj_player1.x - mid_x, cam_y + obj_player1.y - mid_y);
