@@ -13,6 +13,7 @@
     {"id":{"name":"Menu_page","path":"rooms/Menu_page/Menu_page.yy",},"order":0,},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":2,},
     {"id":{"name":"obj_camera_move","path":"objects/obj_camera_move/obj_camera_move.yy",},"order":1,},
+    {"id":{"name":"spr_chun_kick","path":"sprites/spr_chun_kick/spr_chun_kick.yy",},"order":5,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
   ],
   "Options": [
