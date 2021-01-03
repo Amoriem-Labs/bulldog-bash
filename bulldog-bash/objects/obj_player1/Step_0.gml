@@ -19,6 +19,7 @@ else
 
 key_right = keyboard_check(ord("D"));
 key_left = keyboard_check(ord("A"));
+key_up = keyboard_check_pressed(ord("W"));
 
 hspeed = (key_right - key_left) * horizontal_speed;
 
@@ -32,6 +33,10 @@ if (key_right) {
 if (key_left) {
 	image_speed = hspeed / 6;
 	// sprite_index = spr_chun_walk_bw;
+}
+
+if (key_up) {
+	vspeed = jump_power;
 }
 
 // idle, not moving
