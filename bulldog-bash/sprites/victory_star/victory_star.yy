@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2917e912-92d7-440f-b13a-02757359aeee","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "map & ui",
+    "path": "folders/Sprites/map & ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "victory_star",

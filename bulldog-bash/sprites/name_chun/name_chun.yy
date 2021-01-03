@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"436ce70f-69dd-4bd3-b74c-b9fdfd507aab","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "map & ui",
+    "path": "folders/Sprites/map & ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "name_chun",

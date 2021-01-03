@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 399,
+  "bbox_right": 99,
   "bbox_top": 0,
-  "bbox_bottom": 31,
+  "bbox_bottom": 143,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 400,
-  "height": 32,
+  "width": 100,
+  "height": 144,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"73ec9a13-6514-470b-a990-42db2eb334c6","path":"sprites/health_right/health_right.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"73ec9a13-6514-470b-a990-42db2eb334c6","path":"sprites/health_right/health_right.yy",},"LayerId":{"name":"5403f732-ec3d-4ad7-a60b-f40df30fd420","path":"sprites/health_right/health_right.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"health_right","path":"sprites/health_right/health_right.yy",},"resourceVersion":"1.0","name":"73ec9a13-6514-470b-a990-42db2eb334c6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"22cb60c2-2fe7-475e-842d-17372ba6bb63","path":"sprites/portrait_chun/portrait_chun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"22cb60c2-2fe7-475e-842d-17372ba6bb63","path":"sprites/portrait_chun/portrait_chun.yy",},"LayerId":{"name":"422b3c52-2e80-43f0-b152-14a5ec576a46","path":"sprites/portrait_chun/portrait_chun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"portrait_chun","path":"sprites/portrait_chun/portrait_chun.yy",},"resourceVersion":"1.0","name":"22cb60c2-2fe7-475e-842d-17372ba6bb63","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"health_right","path":"sprites/health_right/health_right.yy",},
+    "spriteId": {"name":"portrait_chun","path":"sprites/portrait_chun/portrait_chun.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"917e3760-6b3d-4de5-9c6a-edb607d664e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"73ec9a13-6514-470b-a990-42db2eb334c6","path":"sprites/health_right/health_right.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d811c543-4646-43d1-965e-1b45333eccb6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22cb60c2-2fe7-475e-842d-17372ba6bb63","path":"sprites/portrait_chun/portrait_chun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"health_right","path":"sprites/health_right/health_right.yy",},
+    "parent": {"name":"portrait_chun","path":"sprites/portrait_chun/portrait_chun.yy",},
     "resourceVersion": "1.3",
-    "name": "health_right",
+    "name": "portrait_chun",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5403f732-ec3d-4ad7-a60b-f40df30fd420","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"422b3c52-2e80-43f0-b152-14a5ec576a46","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "map & ui",
     "path": "folders/Sprites/map & ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "health_right",
+  "name": "portrait_chun",
   "tags": [],
   "resourceType": "GMSprite",
 }

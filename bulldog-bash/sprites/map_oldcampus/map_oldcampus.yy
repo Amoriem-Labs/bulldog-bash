@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7b3fd070-988f-4859-869d-c919bfa34f70","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "map & ui",
+    "path": "folders/Sprites/map & ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "map_oldcampus",
