@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_test_rect",
+    "path": "sprites/spr_test_rect/spr_test_rect.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
