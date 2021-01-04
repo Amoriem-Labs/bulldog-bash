@@ -3,3 +3,5 @@
 
 // set animation speed
 image_speed = 0;
+
+portrait = portrait_chun;

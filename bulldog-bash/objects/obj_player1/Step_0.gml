@@ -1,6 +1,7 @@
 /// @description Movement and Jump
 // You can write your code in this editor
 
+player_speed = 5;
 
 if (!place_meeting(x, y, obj_floor))
 {
@@ -27,12 +28,14 @@ hspeed = (key_right - key_left) * horizontal_speed;
 if (key_right) {
 	image_speed = hspeed / 6;
 	// sprite_index = spr_chun_walk_fw;
+	hspeed = player_speed;
 }
 
 // moving backward animation, change sprite
 if (key_left) {
 	image_speed = hspeed / 6;
 	// sprite_index = spr_chun_walk_bw;
+	hspeed = -player_speed;
 }
 
 if (key_up) {
