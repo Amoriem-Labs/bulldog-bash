@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if (!place_meeting(x, y+vspeed, obj_floor))
+if (!place_meeting(x, y, obj_floor))
 {
 	gravity = grv;
 }
@@ -10,16 +10,11 @@ else
 {
    gravity = 0;
    vspeed = 0;
-   
-   if(keyboard_check_pressed(vk_space))
-	{
-		vspeed = jump_power;
-	}
 }
 
-key_right = keyboard_check(ord("D"));
-key_left = keyboard_check(ord("A"));
-key_up = keyboard_check_pressed(ord("W"));
+key_right = keyboard_check(vk_right);
+key_left = keyboard_check(vk_left);
+key_up = keyboard_check_pressed(vk_up);
 
 hspeed = (key_right - key_left) * horizontal_speed;
 
