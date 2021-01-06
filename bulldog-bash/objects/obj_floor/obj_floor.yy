@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "floor_oldcampus",
+    "path": "sprites/floor_oldcampus/floor_oldcampus.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
