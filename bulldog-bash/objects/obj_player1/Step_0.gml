@@ -23,19 +23,6 @@ key_up = keyboard_check_pressed(ord("W"));
 
 hspeed = (key_right - key_left) * horizontal_speed;
 
-// collision check
-if (place_meeting(x+hspeed,y,obj_player2)) {
-	x = x - hspeed;
-}
-
-if (place_meeting(x-hspeed,y,obj_player2)) {
-	x = x + hspeed;
-}
-
-if (place_meeting(x,y+vspeed,obj_player2)) {
-	gravity = 0;
-    vspeed = 0;
-}
 
 // moving forward animation, change sprite
 if (key_right) {
@@ -59,3 +46,18 @@ if (keyboard_check(vk_nokey)) {
 	image_index = 0;
 }
 
+// collision check
+if (place_meeting(x+hspeed,y,obj_player2)) {
+	x = x - hspeed;
+}
+
+if (place_meeting(x-hspeed,y,obj_player2)) {
+	x = x + hspeed;
+}
+
+if (place_meeting(x,y+vspeed,obj_player2)) {
+	gravity = 0;
+    vspeed = 0;
+}
+
+// attacks

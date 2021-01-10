@@ -3,7 +3,7 @@
     "name": "floor_oldcampus",
     "path": "sprites/floor_oldcampus/floor_oldcampus.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
