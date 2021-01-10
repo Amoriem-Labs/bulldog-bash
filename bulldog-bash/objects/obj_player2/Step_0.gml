@@ -18,6 +18,20 @@ key_up = keyboard_check_pressed(ord("I"));
 
 hspeed = (key_right - key_left) * horizontal_speed;
 
+// collision check
+if (place_meeting(x+hspeed,y,obj_player1)) {
+	x = x - hspeed;
+}
+
+if (place_meeting(x-hspeed,y,obj_player1)) {
+	x = x + hspeed;
+}
+
+if (place_meeting(x,y+vspeed,obj_player1)) {
+	gravity = 0;
+    vspeed = 0;
+}
+
 // moving forward animation, change sprite
 if (key_right) {
 	image_speed = hspeed / 6;
