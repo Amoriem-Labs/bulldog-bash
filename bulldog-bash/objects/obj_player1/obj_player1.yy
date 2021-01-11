@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_test_rect",
-    "path": "sprites/spr_test_rect/spr_test_rect.yy",
+    "name": "chun_idle",
+    "path": "sprites/chun_idle/chun_idle.yy",
   },
   "solid": true,
   "visible": true,
