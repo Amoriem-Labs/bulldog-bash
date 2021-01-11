@@ -25,26 +25,23 @@ hspeed = (key_right - key_left) * horizontal_speed;
 
 
 // moving forward animation, change sprite
-if (key_right) {
-	image_speed = hspeed / 6;
+if (hspeed > 0) {
+	// image_speed = hspeed / 6;
 	sprite_index = chun_walk_forward;
 }
 
 // moving backward animation, change sprite
-if (key_left) {
-	image_speed = hspeed / 6;
+else if (hspeed < 0) {
+	// image_speed = hspeed / 6;
 	sprite_index = chun_walk_backward;
 }
 
-if (key_up) {
-	vspeed = jump_power;
+// idle, not moving
+else {
+	sprite_index = chun_idle;
 }
 
-// idle, not moving
-if (keyboard_check(vk_nokey)) {
-	image_speed = 0;
-	image_index = 0;
-}
+
 
 // collision check
 if (place_meeting(x+hspeed,y,obj_player2)) {
