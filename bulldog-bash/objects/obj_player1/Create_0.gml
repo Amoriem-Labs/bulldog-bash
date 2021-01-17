@@ -9,3 +9,13 @@ jump_power = -20;
 horizontal_speed = 8;
 
 grv = 2;
+
+state = PLAYERSTATE.FREE;
+hitByAtk = ds_list_create();
+
+enum PLAYERSTATE
+{
+	FREE,
+	ATK_PUNCH,
+	ATK_KICK,
+}
