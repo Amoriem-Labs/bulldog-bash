@@ -7,7 +7,7 @@
 
 #region // Game variables
 #macro GRAVITY_FORCE	0.5
-#macro WALK_SPD			8
+#macro WALK_SPD			7
 #macro JUMP_FORCE		-10
 #endregion
 
@@ -18,5 +18,13 @@
 #endregion
 
 #region // States
-#macro STATE_FREE 0
+#macro STATE_FREE	0
+#macro STATE_ATK	1
+#endregion
+
+#region // Attacks
+#macro ATK_P1	0
+#macro ATK_P2	1
+#macro ATK_K1	2
+#macro ATK_K2	3
 #endregion

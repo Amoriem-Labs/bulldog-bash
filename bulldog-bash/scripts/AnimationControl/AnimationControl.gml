@@ -3,11 +3,34 @@
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
-			if (hspd == 0) {
-				sprite_index = sp_idle;
+			// on ground
+			if landed {
+				// not blocking
+				if !block {
+					// if idle
+					if (hspd == 0) {
+						SetSprite(sp_idle);
+					}
+					// character is moving
+					else {
+						sprite_index = (sign(hspd) == sign(image_xscale)) ? sp_fwd : sp_bwd
+					}
+				}
+				// block animation
+				else {
+					if !SetSprite(sp_block) {
+						FreezeFrame()
+					}
+				}
 			}
+			// in air
 			else {
-				sprite_index = (sign(hspd) == sign(image_xscale)) ? sp_fwd : sp_bwd
+				if hspd >= 0 {
+					SetSprite(sp_jump_fwd)
+				}
+				else {
+					SetSprite(sp_jump_bwd)
+				}
 			}
 	}
 }
