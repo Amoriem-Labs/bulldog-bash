@@ -18,9 +18,12 @@ function AnimationControl(){
 				}
 				// block animation
 				else {
+					/*
 					if !SetSprite(sp_block) {
 						FreezeFrame()
 					}
+					*/
+					SetSprite(sp_block);
 				}
 			}
 			// in air
@@ -32,5 +35,20 @@ function AnimationControl(){
 					SetSprite(sp_jump_bwd)
 				}
 			}
+		break;
+		
+		case STATE_ATK:
+			// can't attack, exit state (for glitch purposes)
+			if !can_atk {
+				exit
+			}
+			if landed {
+				SetSprite(sp_atk[atk_type])
+			}
+			else {
+				SetSprite(sp_atk_air[atk_type])
+			}
+			can_atk = false;
+		break;
 	}
 }

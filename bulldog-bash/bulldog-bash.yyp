@@ -21,6 +21,7 @@
     {"id":{"name":"chun_jump_kick","path":"sprites/chun_jump_kick/chun_jump_kick.yy",},"order":4,},
     {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},"order":0,},
     {"id":{"name":"health_left","path":"sprites/health_left/health_left.yy",},"order":1,},
+    {"id":{"name":"SetAtk","path":"scripts/SetAtk/SetAtk.yy",},"order":6,},
     {"id":{"name":"name_salovey","path":"sprites/name_salovey/name_salovey.yy",},"order":5,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":7,},
     {"id":{"name":"SetSprite","path":"scripts/SetSprite/SetSprite.yy",},"order":4,},
@@ -40,6 +41,7 @@
     {"id":{"name":"chun_jump_punch","path":"sprites/chun_jump_punch/chun_jump_punch.yy",},"order":5,},
     {"id":{"name":"portrait_chun","path":"sprites/portrait_chun/portrait_chun.yy",},"order":9,},
     {"id":{"name":"obj_camera_move","path":"objects/obj_camera_move/obj_camera_move.yy",},"order":1,},
+    {"id":{"name":"AnimEnd","path":"scripts/AnimEnd/AnimEnd.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
   ],
   "Options": [

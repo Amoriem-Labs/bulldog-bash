@@ -24,7 +24,5 @@
 
 #region // Attacks
 #macro ATK_P1	0
-#macro ATK_P2	1
-#macro ATK_K1	2
-#macro ATK_K2	3
+#macro ATK_K1	1
 #endregion
