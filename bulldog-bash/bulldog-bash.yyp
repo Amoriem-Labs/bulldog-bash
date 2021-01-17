@@ -36,6 +36,8 @@
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":2,},
     {"id":{"name":"obj_player2","path":"objects/obj_player2/obj_player2.yy",},"order":6,},
     {"id":{"name":"chun_walk_backward","path":"sprites/chun_walk_backward/chun_walk_backward.yy",},"order":9,},
+    {"id":{"name":"chun_punch_hb","path":"sprites/chun_punch_hb/chun_punch_hb.yy",},"order":12,},
+    {"id":{"name":"PlayerState_Free","path":"scripts/PlayerState_Free/PlayerState_Free.yy",},"order":0,},
     {"id":{"name":"ui_top","path":"sprites/ui_top/ui_top.yy",},"order":6,},
     {"id":{"name":"chun_jump_punch","path":"sprites/chun_jump_punch/chun_jump_punch.yy",},"order":5,},
     {"id":{"name":"portrait_chun","path":"sprites/portrait_chun/portrait_chun.yy",},"order":9,},
