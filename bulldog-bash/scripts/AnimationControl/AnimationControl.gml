@@ -24,6 +24,7 @@ function AnimationControl(){
 					}
 					*/
 					SetSprite(sp_block);
+					hspd = 0;
 				}
 			}
 			// in air
