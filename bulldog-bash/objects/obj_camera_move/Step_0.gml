@@ -14,4 +14,4 @@ v_move = k_down - k_up;
 cam_x += h_move * h_speed;
 cam_y += v_move * v_speed;
 
-camera_set_view_pos(view_camera[0], cam_x + obj_player1.x - mid_x, cam_y + obj_player1.y - mid_y);
+camera_set_view_pos(view_camera[0], cam_x + obj_player.x - mid_x, cam_y + obj_player.y - mid_y);

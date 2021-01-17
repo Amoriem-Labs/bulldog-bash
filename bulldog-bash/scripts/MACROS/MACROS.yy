@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerState_Free",
+  "name": "MACROS",
   "tags": [],
   "resourceType": "GMScript",
 }
