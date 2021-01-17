@@ -1,7 +1,3 @@
-/// @description Movement and Jump
-// You can write your code in this editor
-
-
 if (!place_meeting(x, y+vspeed, obj_floor))
 {
 	gravity = grv;
@@ -17,31 +13,30 @@ else
 	}
 }
 
-key_right = keyboard_check(ord("D"));
-key_left = keyboard_check(ord("A"));
-key_up = keyboard_check_pressed(ord("W"));
-
 hspeed = (key_right - key_left) * horizontal_speed;
 
 
 // moving forward animation, change sprite
-if (hspeed > 0) {
-	// image_speed = hspeed / 6;
-	sprite_index = chun_walk_forward;
+if (key_right) {
+	image_speed = hspeed / 6;
+	//sprite_index = spr_chun_walk_fw;
 }
 
 // moving backward animation, change sprite
-else if (hspeed < 0) {
-	// image_speed = hspeed / 6;
-	sprite_index = chun_walk_backward;
+if (key_left) {
+	image_speed = hspeed / 6;
+	// sprite_index = spr_chun_walk_bw;
+}
+
+if (key_up) {
+	vspeed = jump_power;
 }
 
 // idle, not moving
-else {
-	sprite_index = chun_idle;
+if (keyboard_check(vk_nokey)) {
+	image_speed = 0;
+	image_index = 0;
 }
-
-
 
 // collision check
 if (place_meeting(x+hspeed,y,obj_player2)) {
@@ -56,3 +51,5 @@ if (place_meeting(x,y+vspeed,obj_player2)) {
 	gravity = 0;
     vspeed = 0;
 }
+
+if (keyAttack) state = PLAYERSTATE.ATK_PUNCH;

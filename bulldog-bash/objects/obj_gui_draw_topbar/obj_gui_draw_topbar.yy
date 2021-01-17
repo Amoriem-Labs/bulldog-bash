@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "map_oldcampus",
+    "path": "sprites/map_oldcampus/map_oldcampus.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

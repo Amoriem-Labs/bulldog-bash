@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // set animation speed
-// image_speed = 0;
+image_speed = 0;
 
 jump_power = -20;
 
