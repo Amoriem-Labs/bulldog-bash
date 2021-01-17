@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b78c37c8-078d-4709-8818-ea9a26d96a46","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "chun",
-    "path": "folders/Sprites/chun.yy",
+    "name": "char_chun",
+    "path": "folders/Sprites/char_chun.yy",
   },
   "resourceVersion": "1.0",
   "name": "chun_jump_backward",

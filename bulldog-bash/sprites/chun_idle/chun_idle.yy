@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a576752e-6619-44bc-91dc-54c771fdba88","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "chun",
-    "path": "folders/Sprites/chun.yy",
+    "name": "char_chun",
+    "path": "folders/Sprites/char_chun.yy",
   },
   "resourceVersion": "1.0",
   "name": "chun_idle",
