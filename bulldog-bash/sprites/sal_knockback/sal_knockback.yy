@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9349f927-63bd-4654-8f1a-09b3c0e52bfc","path":"sprites/sal_knockback/sal_knockback.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9349f927-63bd-4654-8f1a-09b3c0e52bfc","path":"sprites/sal_knockback/sal_knockback.yy",},"LayerId":{"name":"699292eb-7fd8-4422-8c9d-876e265f5428","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sal_knockback","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","name":"9349f927-63bd-4654-8f1a-09b3c0e52bfc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9ccf3040-1f01-48e0-92ad-4e1ce0d37787","path":"sprites/sal_knockback/sal_knockback.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9ccf3040-1f01-48e0-92ad-4e1ce0d37787","path":"sprites/sal_knockback/sal_knockback.yy",},"LayerId":{"name":"0b053274-136d-4b7a-8799-ff1808dd64c3","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sal_knockback","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","name":"9ccf3040-1f01-48e0-92ad-4e1ce0d37787","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sal_knockback","path":"sprites/sal_knockback/sal_knockback.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b12de297-062c-4910-9e20-3bf8e0575d35","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9349f927-63bd-4654-8f1a-09b3c0e52bfc","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"64055ac3-40c5-4a88-9b86-3a4fbfe20140","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ccf3040-1f01-48e0-92ad-4e1ce0d37787","path":"sprites/sal_knockback/sal_knockback.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"699292eb-7fd8-4422-8c9d-876e265f5428","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0b053274-136d-4b7a-8799-ff1808dd64c3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "char_salovey",
