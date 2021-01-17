@@ -15,16 +15,16 @@ function HandleSprites(char) {
 
 		// add in Pete Salovey
 		case CHAR_PETE:
-			sp_idle = spr_test_rect_2;
-			sp_fwd = spr_test_rect_2;
-			sp_bwd = spr_test_rect_2;
-			sp_block = spr_test_rect_2;
-			sp_jump_fwd = spr_test_rect_2;
-			sp_jump_bwd = spr_test_rect_2;
+			sp_idle = sal_idle;
+			sp_fwd = sal_walk_forward;
+			sp_bwd = sal_walk_backward;
+			sp_block = sal_block;
+			sp_jump_fwd = sal_idle;
+			sp_jump_bwd = sal_idle;
 			
 			// attacks
-			sp_atk = spr_test_rect_2;
-			sp_atk_air = spr_test_rect_2;
+			sp_atk = [sal_punch, sal_kick];
+			sp_atk_air = [sal_punch, sal_kick];
 		break
 	}
 
