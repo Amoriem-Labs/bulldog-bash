@@ -4,7 +4,7 @@
   "interpreter": 0,
   "pointRounding": 0,
   "fontName": "Arial",
-  "styleName": "Narrow Bold",
+  "styleName": "Bold",
   "size": 50.0,
   "bold": true,
   "italic": false,

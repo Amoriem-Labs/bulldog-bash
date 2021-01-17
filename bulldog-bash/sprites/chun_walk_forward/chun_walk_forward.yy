@@ -92,8 +92,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"042919f2-adbd-4f1d-a333-d4a52911edd0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "chun",
-    "path": "folders/Sprites/chun.yy",
+    "name": "char_chun",
+    "path": "folders/Sprites/char_chun.yy",
   },
   "resourceVersion": "1.0",
   "name": "chun_walk_forward",
