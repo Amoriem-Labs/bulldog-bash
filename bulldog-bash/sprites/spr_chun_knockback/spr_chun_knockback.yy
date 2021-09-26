@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "chun",
+    "path": "folders/Sprites/chun.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_chun_knockback",
