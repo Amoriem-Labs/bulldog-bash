@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_salovey_idle","path":"sprites/spr_salovey_idle/spr_salovey_idle.yy",},"order":1,},
+    {"id":{"name":"spr_salovey_jump_punch","path":"sprites/spr_salovey_jump_punch/spr_salovey_jump_punch.yy",},"order":9,},
     {"id":{"name":"spr_salovey_walk_backward","path":"sprites/spr_salovey_walk_backward/spr_salovey_walk_backward.yy",},"order":5,},
     {"id":{"name":"spr_salovey_kick","path":"sprites/spr_salovey_kick/spr_salovey_kick.yy",},"order":2,},
     {"id":{"name":"spr_salovey_knockback","path":"sprites/spr_salovey_knockback/spr_salovey_knockback.yy",},"order":3,},
@@ -11,10 +12,12 @@
     {"id":{"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},"order":9,},
     {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":8,},
     {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":6,},
+    {"id":{"name":"spr_salovey_jump_kick","path":"sprites/spr_salovey_jump_kick/spr_salovey_jump_kick.yy",},"order":8,},
     {"id":{"name":"spr_chun_jump","path":"sprites/spr_chun_jump/spr_chun_jump.yy",},"order":2,},
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},
     {"id":{"name":"spr_chun_jump_punch","path":"sprites/spr_chun_jump_punch/spr_chun_jump_punch.yy",},"order":4,},
     {"id":{"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},"order":0,},
+    {"id":{"name":"spr_salovey_jump","path":"sprites/spr_salovey_jump/spr_salovey_jump.yy",},"order":7,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
