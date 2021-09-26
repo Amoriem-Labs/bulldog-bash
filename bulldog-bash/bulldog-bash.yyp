@@ -7,8 +7,10 @@
     {"id":{"name":"spr_salovey_punch","path":"sprites/spr_salovey_punch/spr_salovey_punch.yy",},"order":4,},
     {"id":{"name":"spr_salovey_walk_forward","path":"sprites/spr_salovey_walk_forward/spr_salovey_walk_forward.yy",},"order":6,},
     {"id":{"name":"Sprite18","path":"sprites/Sprite18/Sprite18.yy",},"order":16,},
+    {"id":{"name":"spr_salovey_jump","path":"sprites/spr_salovey_jump/spr_salovey_jump.yy",},"order":7,},
     {"id":{"name":"spr_salovey_block","path":"sprites/spr_salovey_block/spr_salovey_block.yy",},"order":0,},
     {"id":{"name":"spr_chun_idle","path":"sprites/spr_chun_idle/spr_chun_idle.yy",},"order":1,},
+    {"id":{"name":"spr_salovey_jump_punch","path":"sprites/spr_salovey_jump_punch/spr_salovey_jump_punch.yy",},"order":9,},
     {"id":{"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},"order":7,},
     {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":8,},
     {"id":{"name":"testing_floor","path":"objects/testing_floor/testing_floor.yy",},"order":0,},
@@ -20,6 +22,7 @@
     {"id":{"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},"order":0,},
     {"id":{"name":"Sprite17","path":"sprites/Sprite17/Sprite17.yy",},"order":15,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":7,},
+    {"id":{"name":"spr_salovey_jump_kick","path":"sprites/spr_salovey_jump_kick/spr_salovey_jump_kick.yy",},"order":8,},
     {"id":{"name":"testing_room","path":"rooms/testing_room/testing_room.yy",},"order":0,},
   ],
   "Options": [
@@ -63,7 +66,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.580",
+    "IDEVersion": "2.3.4.583",
   },
   "resourceVersion": "1.4",
   "name": "bulldog-bash",
