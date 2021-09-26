@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_chun_idle",
-    "path": "sprites/spr_chun_idle/spr_chun_idle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

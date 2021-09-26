@@ -14,5 +14,11 @@ p1.character = CHAR_CHUN;
 p2.character = CHAR_SALOVEY;
 
 //update sprites
-HandleSprites(p1.character);
-HandleSprites(p2.character);
+//p1.sprite_index = spr_chun_idle;
+//p2.sprite_index = spr_salovey_idle;
+
+with p1
+	HandleSprites(character);
+	
+with p2
+	HandleSprites(character);
