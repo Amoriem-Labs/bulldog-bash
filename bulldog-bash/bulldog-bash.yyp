@@ -20,7 +20,7 @@
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},
     {"id":{"name":"spr_chun_jump_punch","path":"sprites/spr_chun_jump_punch/spr_chun_jump_punch.yy",},"order":4,},
     {"id":{"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},"order":0,},
-    {"id":{"name":"Sprite17","path":"sprites/Sprite17/Sprite17.yy",},"order":15,},
+    {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},"order":15,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":7,},
     {"id":{"name":"spr_salovey_jump_kick","path":"sprites/spr_salovey_jump_kick/spr_salovey_jump_kick.yy",},"order":8,},
     {"id":{"name":"testing_room","path":"rooms/testing_room/testing_room.yy",},"order":0,},
