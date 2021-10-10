@@ -16,8 +16,6 @@
     {"id":{"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},"order":7,},
     {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":8,},
     {"id":{"name":"room_map_old_campus","path":"rooms/room_map_old_campus/room_map_old_campus.yy",},"order":1,},
-    {"id":{"name":"testing_floor","path":"objects/testing_floor/testing_floor.yy",},"order":0,},
-    {"id":{"name":"testing_object","path":"objects/testing_object/testing_object.yy",},"order":1,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":12,},
     {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":6,},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},"order":2,},
