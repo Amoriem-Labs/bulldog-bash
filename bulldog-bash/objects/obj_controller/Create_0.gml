@@ -1,7 +1,7 @@
 // player spawn
 
-p1 = instance_create_layer(room_width/2 - 100, 220, "Instances", obj_player);
-p2 = instance_create_layer(room_width/2 + 100, 220, "Instances", obj_player);
+p1 = instance_create_layer(room_width/2 - 100, 930, "Instances", obj_player);
+p2 = instance_create_layer(room_width/2 + 100, 930, "Instances", obj_player);
 p2.image_xscale = -1;
 p2.controller = CONT_P2
 
