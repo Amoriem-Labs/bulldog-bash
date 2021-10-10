@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_salovey_idle","path":"sprites/spr_salovey_idle/spr_salovey_idle.yy",},"order":1,},
+    {"id":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"order":1,},
     {"id":{"name":"spr_salovey_walk_backward","path":"sprites/spr_salovey_walk_backward/spr_salovey_walk_backward.yy",},"order":5,},
     {"id":{"name":"spr_salovey_kick","path":"sprites/spr_salovey_kick/spr_salovey_kick.yy",},"order":2,},
     {"id":{"name":"spr_salovey_knockback","path":"sprites/spr_salovey_knockback/spr_salovey_knockback.yy",},"order":3,},
@@ -9,17 +10,30 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":2,},
     {"id":{"name":"spr_salovey_walk_forward","path":"sprites/spr_salovey_walk_forward/spr_salovey_walk_forward.yy",},"order":6,},
     {"id":{"name":"spr_salovey_block","path":"sprites/spr_salovey_block/spr_salovey_block.yy",},"order":0,},
+<<<<<<< Updated upstream
     {"id":{"name":"kcp","path":"scripts/kcp/kcp.yy",},"order":1,},
     {"id":{"name":"kcr","path":"scripts/kcr/kcr.yy",},"order":2,},
+=======
+    {"id":{"name":"spr_health_left","path":"sprites/spr_health_left/spr_health_left.yy",},"order":0,},
+>>>>>>> Stashed changes
     {"id":{"name":"spr_chun_idle","path":"sprites/spr_chun_idle/spr_chun_idle.yy",},"order":1,},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"order":1,},
     {"id":{"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},"order":7,},
     {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":8,},
+<<<<<<< Updated upstream
     {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":5,},
     {"id":{"name":"kc","path":"scripts/kc/kc.yy",},"order":0,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":4,},
     {"id":{"name":"HandleSprites","path":"scripts/HandleSprites/HandleSprites.yy",},"order":0,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":0,},
+=======
+    {"id":{"name":"scr_render_health","path":"scripts/scr_render_health/scr_render_health.yy",},"order":0,},
+    {"id":{"name":"obj_health_right","path":"objects/obj_health_right/obj_health_right.yy",},"order":3,},
+    {"id":{"name":"testing_floor","path":"objects/testing_floor/testing_floor.yy",},"order":0,},
+    {"id":{"name":"testing_object","path":"objects/testing_object/testing_object.yy",},"order":1,},
+    {"id":{"name":"obj_health_left","path":"objects/obj_health_left/obj_health_left.yy",},"order":2,},
+    {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":6,},
+>>>>>>> Stashed changes
     {"id":{"name":"spr_chun_jump","path":"sprites/spr_chun_jump/spr_chun_jump.yy",},"order":2,},
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},
     {"id":{"name":"spr_chun_jump_punch","path":"sprites/spr_chun_jump_punch/spr_chun_jump_punch.yy",},"order":4,},
@@ -59,8 +73,12 @@
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/salovey.yy","order":5,"resourceVersion":"1.0","name":"salovey","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/chun.yy","order":10,"resourceVersion":"1.0","name":"chun","tags":[],"resourceType":"GMFolder",},
+<<<<<<< Updated upstream
     {"folderPath":"folders/Scripts/Shortcuts.yy","order":3,"resourceVersion":"1.0","name":"Shortcuts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Characters.yy","order":6,"resourceVersion":"1.0","name":"Characters","tags":[],"resourceType":"GMFolder",},
+=======
+    {"folderPath":"folders/Sprites/map & ui.yy","order":12,"resourceVersion":"1.0","name":"map & ui","tags":[],"resourceType":"GMFolder",},
+>>>>>>> Stashed changes
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -70,7 +88,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.583",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "bulldog-bash",
