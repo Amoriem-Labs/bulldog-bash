@@ -10,3 +10,5 @@ controller = CONT_P1;
 opponent = noone;
 
 state = STATE_FREE;
+
+health = 100;

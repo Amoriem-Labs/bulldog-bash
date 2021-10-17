@@ -6,8 +6,12 @@ left = (controller == CONT_P1) ? ord ("A") : vk_left;
 //char control
 CharacterControl();
 
+//attacks
+AttackControl();
+
 //animation control
 AnimationControl();
 
 //collision
 CollisionAndMovements();
+
