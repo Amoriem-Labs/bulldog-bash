@@ -24,7 +24,6 @@
     {"id":{"name":"kc","path":"scripts/kc/kc.yy",},"order":0,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":4,},
     {"id":{"name":"HandleSprites","path":"scripts/HandleSprites/HandleSprites.yy",},"order":0,},
-    {"id":{"name":"CollisionAndMovements","path":"scripts/CollisionAndMovements/CollisionAndMovements.yy",},"order":1,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":0,},
     {"id":{"name":"spr_chun_jump","path":"sprites/spr_chun_jump/spr_chun_jump.yy",},"order":2,},
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},

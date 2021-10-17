@@ -2,7 +2,9 @@ function CharacterControl(){
 	switch (state) {
 		case STATE_FREE:
 			// free state; all movement is possible
-			hspd = WALK_SPD*(kc(right) - kc(left));
+			if (kc(right) || kc(left)) {
+				phy_speed_x = WALK_SPD*(kc(right) - kc(left));
+			}
 			break;
 	}
 	
