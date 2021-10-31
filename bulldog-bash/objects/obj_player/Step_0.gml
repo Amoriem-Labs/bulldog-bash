@@ -7,8 +7,8 @@ AttackControl();
 //animation control
 AnimationControl();
 
-//collision. Should this still be here??
-// CollisionAndMovements();
+// handle collisions for attacks
+//CollisionAndMovements();
 
 if (abs(phy_rotation) > 3) {
 	if (phy_rotation > 0) {

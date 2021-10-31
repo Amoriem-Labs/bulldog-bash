@@ -18,4 +18,8 @@
 
 #region //States
 #macro STATE_FREE 0
+#macro STATE_PUNCH 1
+#macro STATE_KICK 2
+#macro STATE_BLOCK 3
 #endregion
+

@@ -30,6 +30,7 @@
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},
     {"id":{"name":"spr_chun_jump_punch","path":"sprites/spr_chun_jump_punch/spr_chun_jump_punch.yy",},"order":4,},
     {"id":{"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},"order":0,},
+    {"id":{"name":"HandleAttackCollisions","path":"scripts/HandleAttackCollisions/HandleAttackCollisions.yy",},"order":5,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":6,},
     {"id":{"name":"CharacterControl","path":"scripts/CharacterControl/CharacterControl.yy",},"order":2,},
   ],
