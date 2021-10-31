@@ -27,3 +27,5 @@ with p2
 	right = vk_right;
 	left = vk_left;
 }
+
+CreateCenterObject(p1, p2);
