@@ -1,3 +1,5 @@
+just_jumped = false;
+
 //char control
 CharacterControl();
 
@@ -16,4 +18,3 @@ if (abs(phy_rotation) > 3) {
 phy_angular_velocity = 0;
 
 grounded = false;
-just_jumped = false;
