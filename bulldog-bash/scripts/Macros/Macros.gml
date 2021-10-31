@@ -10,6 +10,8 @@
 #macro JUMP_FORCE -10
 #macro FALL_COEF 1
 #macro N_JUMPS 5
+#macro HEALTH_FLASH_SPEED 10
+#macro HEALTH_NUM_FLASHES 2
 #endregion
 
 #region //Controllers
