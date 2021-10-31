@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -27,6 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"780bdf51-c114-4c62-9f2a-05767c69c2d8","path":"sprites/spr_health_right/spr_health_right.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"780bdf51-c114-4c62-9f2a-05767c69c2d8","path":"sprites/spr_health_right/spr_health_right.yy",},"LayerId":{"name":"589be2c2-3f48-4e2e-b356-0c0d5b14ef4f","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","name":"780bdf51-c114-4c62-9f2a-05767c69c2d8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ecf061f3-bfa0-41b4-a0cf-57ec78c4349f","path":"sprites/spr_health_right/spr_health_right.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ecf061f3-bfa0-41b4-a0cf-57ec78c4349f","path":"sprites/spr_health_right/spr_health_right.yy",},"LayerId":{"name":"589be2c2-3f48-4e2e-b356-0c0d5b14ef4f","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","name":"ecf061f3-bfa0-41b4-a0cf-57ec78c4349f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},
@@ -36,13 +39,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"12ea725b-d910-4c0c-bcc4-ed34012e0840","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"780bdf51-c114-4c62-9f2a-05767c69c2d8","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+            {"id":"c1fdbce8-edda-413c-9892-d4a067f61a39","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ecf061f3-bfa0-41b4-a0cf-57ec78c4349f","path":"sprites/spr_health_right/spr_health_right.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -54,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 200,
-    "yorigin": 16,
+    "xorigin": 0,
+    "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},

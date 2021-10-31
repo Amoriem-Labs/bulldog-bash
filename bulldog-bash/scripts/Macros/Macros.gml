@@ -8,6 +8,8 @@
 #macro WALK_SPD 2
 #macro SPRINT_SPD 4
 #macro JUMP_FORCE -10
+#macro HEALTH_FLASH_SPEED 10
+#macro HEALTH_NUM_FLASHES 2
 #endregion
 
 #region //Controllers

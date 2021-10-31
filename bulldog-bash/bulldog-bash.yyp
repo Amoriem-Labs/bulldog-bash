@@ -28,7 +28,7 @@
     {"id":{"name":"HandleSprites","path":"scripts/HandleSprites/HandleSprites.yy",},"order":0,},
     {"id":{"name":"CollisionAndMovements","path":"scripts/CollisionAndMovements/CollisionAndMovements.yy",},"order":1,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":0,},
-    {"id":{"name":"scr_render_health","path":"scripts/scr_render_health/scr_render_health.yy",},"order":0,},
+    {"id":{"name":"lose_health","path":"scripts/lose_health/lose_health.yy",},"order":0,},
     {"id":{"name":"obj_health_right","path":"objects/obj_health_right/obj_health_right.yy",},"order":3,},
     {"id":{"name":"obj_health_left","path":"objects/obj_health_left/obj_health_left.yy",},"order":2,},
     {"id":{"name":"spr_chun_jump","path":"sprites/spr_chun_jump/spr_chun_jump.yy",},"order":2,},

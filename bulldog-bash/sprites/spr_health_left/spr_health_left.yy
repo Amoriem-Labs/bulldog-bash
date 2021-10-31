@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -27,6 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"c4159f08-3954-405a-ad38-55d3abe700de","path":"sprites/spr_health_left/spr_health_left.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"c4159f08-3954-405a-ad38-55d3abe700de","path":"sprites/spr_health_left/spr_health_left.yy",},"LayerId":{"name":"2f220f6e-078f-4538-b784-27182275cb00","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_health_left","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","name":"c4159f08-3954-405a-ad38-55d3abe700de","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ad41534c-2058-4bcd-a26b-8da911b33d74","path":"sprites/spr_health_left/spr_health_left.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ad41534c-2058-4bcd-a26b-8da911b33d74","path":"sprites/spr_health_left/spr_health_left.yy",},"LayerId":{"name":"2f220f6e-078f-4538-b784-27182275cb00","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_health_left","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","name":"ad41534c-2058-4bcd-a26b-8da911b33d74","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_health_left","path":"sprites/spr_health_left/spr_health_left.yy",},
@@ -36,13 +39,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"897ee699-f57e-4c08-bfbb-eef3e65f0aba","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4159f08-3954-405a-ad38-55d3abe700de","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+            {"id":"65d57904-0d4c-4ae2-a8e1-3749e3c96fa5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad41534c-2058-4bcd-a26b-8da911b33d74","path":"sprites/spr_health_left/spr_health_left.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -54,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 200,
-    "yorigin": 16,
+    "xorigin": 0,
+    "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_health_left","path":"sprites/spr_health_left/spr_health_left.yy",},
