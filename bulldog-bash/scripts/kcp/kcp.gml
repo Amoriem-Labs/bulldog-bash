@@ -1,3 +1,3 @@
-function kcp(){
-	return keyboard_check_pressed(argument0);
+function kcp(key){
+	return keyboard_check_pressed(key);
 }

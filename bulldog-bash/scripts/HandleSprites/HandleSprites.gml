@@ -1,9 +1,5 @@
-//passes in p1, p2
-//show_debug_message(argument0)
-
 switch (argument0) {
 	case CHAR_CHUN:
-		//show_debug_message("CHAR CHUN");
 		sp_idle = spr_chun_idle;
 		sp_forward = spr_chun_walk_forward;
 		sp_backward = spr_chun_walk_backward;
@@ -13,12 +9,12 @@ switch (argument0) {
 		//jump kick sprite is just a kick
 		sp_kick = spr_chun_jump_kick;
 		sp_knockback = spr_chun_knockback;
-		sp_block = spr_chun_block
+		sp_block = spr_chun_block;
+		sp_jump = spr_chun_jump;
 		sprite_index = sp_idle;
 	break;
 	
 	case CHAR_SALOVEY:
-		//show_debug_message("CHAR SALOVEY");
 		sp_idle = spr_salovey_idle;
 		sp_forward = spr_salovey_walk_forward;
 		sp_backward = spr_salovey_walk_backward;
@@ -29,6 +25,7 @@ switch (argument0) {
 		sp_kick = spr_salovey_kick;
 		sp_knockback = spr_salovey_knockback;
 		sp_block = spr_salovey_block
+		sp_jump = spr_salovey_idle; //to change when jump anim available
 		sprite_index = sp_idle;
 	break;
 	
