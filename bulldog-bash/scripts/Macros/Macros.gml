@@ -5,9 +5,11 @@
 
 #region //Game Variables
 #macro GRAVITY_FORCE 0.5
-#macro WALK_SPD 2
-#macro SPRINT_SPD 4
+#macro WALK_SPD 6
+#macro SPRINT_SPD 8
 #macro JUMP_FORCE -10
+#macro FALL_COEF 1
+#macro N_JUMPS 5
 #macro HEALTH_FLASH_SPEED 10
 #macro HEALTH_NUM_FLASHES 2
 #endregion

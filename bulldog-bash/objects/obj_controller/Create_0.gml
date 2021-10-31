@@ -19,6 +19,8 @@ with p1
 	HandleSprites(character);
 	right = ord ("D");
 	left = ord ("A");
+	up = ord ("W");
+	down = ord ("S");
 }
 	
 with p2
@@ -26,4 +28,6 @@ with p2
 	HandleSprites(character);
 	right = vk_right;
 	left = vk_left;
+	up = vk_up;
+	down = vk_down;
 }
