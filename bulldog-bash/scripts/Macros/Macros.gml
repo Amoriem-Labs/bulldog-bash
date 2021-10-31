@@ -8,6 +8,7 @@
 #macro WALK_SPD 6
 #macro SPRINT_SPD 8
 #macro JUMP_FORCE -10
+#macro FALL_COEF 1
 #macro N_JUMPS 5
 #endregion
 

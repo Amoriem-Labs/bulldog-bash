@@ -11,7 +11,7 @@ function CharacterControl(){
 				phy_speed_y = JUMP_FORCE*(kc(up));
 			}
 			if (kcp(down)) {
-				phy_speed_y -= JUMP_FORCE*(kc(down));
+				phy_speed_y = FALL_COEF*distance_to_object(obj_floor)*(kc(down));
 			}
 			break;
 	}
