@@ -8,6 +8,7 @@
 #macro WALK_SPD 6
 #macro SPRINT_SPD 8
 #macro JUMP_FORCE -10
+#macro DASH_TIMEPAUSE 20 //# fps allowed between dashing pause
 #endregion
 
 #region //Controllers
@@ -18,4 +19,5 @@
 
 #region //States
 #macro STATE_FREE 0
+#macro STATE_DASH 0
 #endregion

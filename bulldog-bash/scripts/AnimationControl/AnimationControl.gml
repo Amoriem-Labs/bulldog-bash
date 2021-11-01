@@ -1,7 +1,13 @@
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
-			if phy_speed_y > 0
+			if(fdash == true) {
+				setSprite(sp_dash_forward, sp_dash_backward);
+			}
+			else if(bdash == true) {
+				setSprite(sp_dash_backward, sp_dash_forward); //don't have to distinguish by char cuz Kevin's god code
+			}	
+			else if phy_speed_y > 0
 				sprite_index = sp_jump;
 			else if phy_speed_x == 0
 				sprite_index = sp_idle;
@@ -11,4 +17,79 @@ function AnimationControl(){
 	}
 }
 
+//-----------------------------FOR DASHING--------------------------------//
+function CheckDashing() {
+	//show_debug_message(string(FdashingPrep) + " " + string(BdashingPrep) + " " + string(dashingTick));
+	if(floor(sprite_index) == sp_idle 
+		and dashingTick == DASH_TIMEPAUSE and FdashingPrep == false and BdashingPrep == false) { 
+		//basically if first right/left tap has not been tapped, then don't do anything
+		//this if fails when movement pressed, because no more idle!
+		dashReset();
+	}
+	else if (FdashingPrep == true) { //in rightward dashing count!
+		if(kcp(right)) { //dash pressed again during right count
+			fdash = true;
+			image_index = 0;
+			if(fdash == false) { //set dash to false at the end of animation
+				dashReset(); 
+			}
+		}
+		else if(kcp(up) or kcp(left) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+			dashReset();
+		}
+			
+		DashTimer(); //-1 every time to count
+	}
+	else if (BdashingPrep == true) { //in leftward dashing count!
+		if(kcp(left)) { //dash pressed again during left count
+			bdash = true;
+			image_index = 0;
+			if(bdash == false) { //set dash to false at the end of animation
+				dashReset();
+			}
+		}
+		else if(kcp(up) or kcp(right) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+			dashReset();
+		}
+			
+		DashTimer(); //-1 every time to count
+	}
+	else if(kcp(right)) { //starts prep rightward
+		FdashingPrep = true; 
+		BdashingPrep = false;
+		dashingTick = DASH_TIMEPAUSE; //resets time
+	}
+	else if(kcp(left)) { //starts prep leftward
+		FdashingPrep = false; 
+		BdashingPrep = true;
+		dashingTick = DASH_TIMEPAUSE; //resets time
+	}
+}
 
+//private helper function for CheckDashing
+function DashTimer() {
+	dashingTick -= 1;
+
+	if(dashingTick <= 0){ //didn't press dash again so it will hit 0, exit dash
+		 dashReset(); //resets it
+	}
+}
+
+//private helper function for CheckDashing
+function dashReset() {
+	FdashingPrep = false;
+	BdashingPrep = false;
+	dashingTick = DASH_TIMEPAUSE;
+}
+
+//private helper function for CheckDashing
+function setSprite(sp1, sp2) {
+	if(image_xscale > 0) {
+		sprite_index = sp1;  
+	}
+	else {
+		sprite_index = sp2;
+	}
+}
+//-----------------------------FOR DASHING--------------------------------//
+	
