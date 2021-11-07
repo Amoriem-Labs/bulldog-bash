@@ -53,7 +53,7 @@
     "spriteId": {"name":"spr_salovey_dash_backward","path":"sprites/spr_salovey_dash_backward/spr_salovey_dash_backward.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 20.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

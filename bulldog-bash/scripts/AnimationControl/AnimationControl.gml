@@ -7,8 +7,8 @@ function AnimationControl(){
 			else if(bdash == true) {
 				setSprite(sp_dash_backward, sp_dash_forward); //don't have to distinguish by char cuz Kevin's god code
 			}	
-			else if phy_speed_y > 0
-				sprite_index = sp_jump;
+			//else if phy_speed_y > 0
+				//sprite_index = sp_jump;
 			else if phy_speed_x == 0
 				sprite_index = sp_idle;
 			else

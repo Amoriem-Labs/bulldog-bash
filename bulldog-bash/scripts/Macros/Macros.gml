@@ -5,10 +5,11 @@
 
 #region //Game Variables
 #macro GRAVITY_FORCE 0.5
-#macro WALK_SPD 6
+#macro WALK_SPD 3 //was 6
 #macro SPRINT_SPD 8
 #macro JUMP_FORCE -10
-#macro DASH_TIMEPAUSE 20 //# fps allowed between dashing pause
+#macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
+#macro SHADOW_TIMER 10
 #endregion
 
 #region //Controllers

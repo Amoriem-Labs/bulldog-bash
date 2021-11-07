@@ -4,18 +4,18 @@ function CharacterControl(){
 			// free state; all movement is possible
 			if (fdash == true) { //hostage other commands, prio dash
 				if(character == CHAR_CHUN) {
-					Dash(1.2, 2, fdash); //Kevin's god code so no need to check reverse
+					Dash(3.6, 2, fdash); //Kevin's god code so no need to check reverse
 				}
 				if(character == CHAR_SALOVEY) {
-					Dash(1.2, 2, bdash);
+					Dash(3.6, 2, bdash);
 				}
 			}
 			else if (bdash == true) {
 				if(character == CHAR_CHUN) {
-					Dash(-1.2, 2, bdash);
+					Dash(-3.6, 2, bdash);
 				}
 				if(character == CHAR_SALOVEY) {
-					Dash(-1.2, 2, fdash);
+					Dash(-3.6, 2, fdash);
 				}
 			}
 			else {	
@@ -41,6 +41,7 @@ function Dash(mult, ind, dash) {
 		variable_global_set(dash, true);
 		if(floor(image_index) >= ind) { //in air after first ind frames
 			phy_speed_x = WALK_SPD*mult; //this is the air speed
+			createShadow();
 		}
 		else {
 			phy_speed_x = 0; //don't move when charging leap
@@ -52,5 +53,14 @@ function Dash(mult, ind, dash) {
 		phy_speed_x = 0; //stops char
 	}
 }
+
+function createShadow() {
+	shadow = instance_create_depth(x, y, depth, obj_shadow); //attempting to add shadow
+	shadow.image_xscale = shadow.image_xscale*sign(image_xscale);
+	shadow.char = id;
+	shadow.image_index = floor(image_index);
+	shadow.sprite_index = sprite_index; //initializing the first shadow
+}
+	
 //-----------------------------FOR DASHING--------------------------------//	
 	
