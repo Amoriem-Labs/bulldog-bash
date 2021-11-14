@@ -6,8 +6,7 @@ switch (argument0) {
 		sp_jump = spr_chun_jump; 
 		sp_punch = spr_chun_punch;
 		sp_jump_punch = spr_chun_jump_punch;
-		//jump kick sprite is just a kick
-		sp_kick = spr_chun_jump_kick;
+		sp_kick = spr_chun_kick;
 		sp_knockback = spr_chun_knockback;
 		sp_block = spr_chun_block;
 		sp_jump = spr_chun_jump;

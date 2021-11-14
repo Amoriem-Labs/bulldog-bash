@@ -50,7 +50,7 @@
     "spriteId": {"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

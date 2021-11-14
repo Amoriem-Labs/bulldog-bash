@@ -1,5 +1,3 @@
-anim_started = false;
-
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
