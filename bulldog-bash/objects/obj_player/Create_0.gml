@@ -9,6 +9,11 @@ state = STATE_FREE;
 
 health = 100;
 
+//-----------------------------FOR DASHING--------------------------------//
+dashReset();
+fdash = false; //rightward dashing movements (sorry for bad naming)
+bdash = false; //leftward dashing movements
+//-----------------------------FOR DASHING--------------------------------//
 grounded = false;
 jumps_left = 0;
 just_jumped = false;

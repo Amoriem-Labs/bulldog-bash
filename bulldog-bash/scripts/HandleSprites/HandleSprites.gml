@@ -11,6 +11,8 @@ switch (argument0) {
 		sp_knockback = spr_chun_knockback;
 		sp_block = spr_chun_block;
 		sp_jump = spr_chun_jump;
+		sp_dash_forward = spr_chun_dash_forward; 
+		sp_dash_backward = spr_chun_dash_backward;
 		sprite_index = sp_idle;
 	break;
 	
@@ -26,6 +28,8 @@ switch (argument0) {
 		sp_knockback = spr_salovey_knockback;
 		sp_block = spr_salovey_block
 		sp_jump = spr_salovey_idle; //to change when jump anim available
+		sp_dash_forward = spr_salovey_dash_forward;
+		sp_dash_backward = spr_salovey_dash_backward;
 		sprite_index = sp_idle;
 	break;
 	

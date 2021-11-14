@@ -1,3 +1,5 @@
+just_jumped = false;
+
 //char control
 CharacterControl();
 
@@ -10,6 +12,14 @@ AnimationControl();
 // handle collisions for attacks
 //CollisionAndMovements();
 
+//-----------------------------FOR DASHING--------------------------------//
+//This prevents multidash between dashes (stops checking during animation)
+if(floor(sprite_index) != sp_dash_forward and floor(sprite_index) != sp_dash_backward) { 
+	CheckDashing();
+}
+//-----------------------------FOR DASHING--------------------------------//
+
+	
 if (abs(phy_rotation) > 3) {
 	if (phy_rotation > 0) {
 		phy_rotation -= 0.0002*delta_time;

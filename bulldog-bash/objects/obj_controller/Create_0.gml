@@ -14,6 +14,7 @@ p1.character = CHAR_CHUN;
 p2.character = CHAR_SALOVEY;
 
 
+
 with p1
 {
 	HandleSprites(character);
