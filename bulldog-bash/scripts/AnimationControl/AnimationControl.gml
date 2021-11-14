@@ -4,35 +4,49 @@ function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
 			// check for attacking anims. Need to change to allow animations to follow through state changes
-			if kc(punch)
-				// sprite_index = sp_punch;
+			if kc(punch) {
 				state = STATE_PUNCH;
-			else if kc(kick)
-				//sprite_index = sp_kick;
+			}
+			else if kc(kick) {
 				state = STATE_KICK;
+			}
 			else if kc(block)
-				//sprite_index = sp_block;
+			{
 				state = STATE_BLOCK
-
+			}
 			// check for movement anims
-			else if phy_speed_y > 0
+			else if phy_speed_y > 0 {
 				sprite_index = sp_jump;
+			}
 			else if(fdash == true) {
 				setSprite(sp_dash_forward, sp_dash_backward);
 			}
 			else if(bdash == true) {
 				setSprite(sp_dash_backward, sp_dash_forward); //don't have to distinguish by char cuz Kevin's god code
 			}	
-			//else if phy_speed_y > 0
+			//else if phy_speed_y > 0 //to test for case if character is falling, need to change animation to fall animation
 				//sprite_index = sp_jump;
 			else if phy_speed_x == 0
+			{
 				sprite_index = sp_idle;
+			}
 			else
+			{
 				sprite_index = (sign (phy_speed_x) == sign (image_xscale)) ? sp_forward:sp_backward;
+			}
 			break;
 			
 		case STATE_PUNCH:
+			sprite_index = sp_punch;
+			break;
 			
+		case STATE_KICK:
+			sprite_index = sp_kick;
+			break;
+			
+		case STATE_BLOCK:
+			sprite_index = sp_block;
+			break;
 	}
 }
 
