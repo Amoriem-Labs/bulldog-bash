@@ -11,7 +11,7 @@
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
-#macro N_JUMPS 5
+#macro N_JUMPS 1
 #macro HEALTH_FLASH_SPEED 10
 #macro HEALTH_NUM_FLASHES 2
 #endregion
@@ -24,5 +24,9 @@
 
 #region //States
 #macro STATE_FREE 0
-#macro STATE_DASH 0
+#macro STATE_PUNCH 1
+#macro STATE_KICK 2
+#macro STATE_BLOCK 3
+#macro STATE_FDASH 4
+#macro STATE_BDASH 5
 #endregion

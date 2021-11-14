@@ -7,6 +7,8 @@ opponent = noone;
 
 state = STATE_FREE;
 
+health = 100;
+
 //-----------------------------FOR DASHING--------------------------------//
 dashReset();
 fdash = false; //rightward dashing movements (sorry for bad naming)

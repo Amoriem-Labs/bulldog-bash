@@ -1,18 +1,57 @@
+anim_started = false;
+
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
-			if(fdash == true) {
+			// check for attacking anims. Need to change to allow animations to follow through state changes
+			if kc(punch) {
+				state = STATE_PUNCH;
+			}
+			else if kc(kick) {
+				state = STATE_KICK;
+			}
+			else if kc(block)
+			{
+				state = STATE_BLOCK
+			}
+			// check for movement anims
+			else if phy_speed_y > 0 {
+				sprite_index = sp_jump;
+			}
+			else if(fdash == true) {
 				setSprite(sp_dash_forward, sp_dash_backward);
 			}
 			else if(bdash == true) {
 				setSprite(sp_dash_backward, sp_dash_forward); //don't have to distinguish by char cuz Kevin's god code
 			}	
-			//else if phy_speed_y > 0
+			//else if phy_speed_y > 0 //to test for case if character is falling, need to change animation to fall animation
 				//sprite_index = sp_jump;
 			else if phy_speed_x == 0
+			{
 				sprite_index = sp_idle;
+			}
 			else
+			{
 				sprite_index = (sign (phy_speed_x) == sign (image_xscale)) ? sp_forward:sp_backward;
+			}
+			break;
+			
+		case STATE_PUNCH:
+			sprite_index = sp_punch;
+			fdash = false;
+			bdash = false;
+			break;
+			
+		case STATE_KICK:
+			sprite_index = sp_kick;
+			fdash = false;
+			bdash = false;
+			break;
+			
+		case STATE_BLOCK:
+			sprite_index = sp_block;
+			fdash = false; 
+			bdash = false;
 			break;
 	}
 }
@@ -34,7 +73,7 @@ function CheckDashing() {
 				dashReset(); 
 			}
 		}
-		else if(kcp(up) or kcp(left) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+		else if(kcp(up) or kcp(left) or kcp(down) or kcp(punch) or kcp(kick) or kcp(block)) { //other keys other than same direction pressed so cancel and reset
 			dashReset();
 		}
 			
@@ -48,7 +87,7 @@ function CheckDashing() {
 				dashReset();
 			}
 		}
-		else if(kcp(up) or kcp(right) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+		else if(kcp(up) or kcp(right) or kcp(down) or kcp(punch) or kcp(kick) or kcp(block)) { //other keys other than same direction pressed so cancel and reset
 			dashReset();
 		}
 			

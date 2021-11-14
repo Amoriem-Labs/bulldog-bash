@@ -3,8 +3,14 @@ just_jumped = false;
 //char control
 CharacterControl();
 
+//attacks
+AttackControl();
+
 //animation control
 AnimationControl();
+
+// handle collisions for attacks
+//CollisionAndMovements();
 
 //-----------------------------FOR DASHING--------------------------------//
 //This prevents multidash between dashes (stops checking during animation)
