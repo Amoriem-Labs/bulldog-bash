@@ -44,7 +44,7 @@
     "spriteId": {"name":"spr_salovey_kick","path":"sprites/spr_salovey_kick/spr_salovey_kick.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 9.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
