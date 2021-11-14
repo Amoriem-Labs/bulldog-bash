@@ -31,6 +31,7 @@
     {"id":{"name":"spr_chun_dash_forward","path":"sprites/spr_chun_dash_forward/spr_chun_dash_forward.yy",},"order":10,},
     {"id":{"name":"spr_chun_dash_backward","path":"sprites/spr_chun_dash_backward/spr_chun_dash_backward.yy",},"order":9,},
     {"id":{"name":"HandleSprites","path":"scripts/HandleSprites/HandleSprites.yy",},"order":0,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":4,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":0,},
     {"id":{"name":"spr_salovey_dash_backward","path":"sprites/spr_salovey_dash_backward/spr_salovey_dash_backward.yy",},"order":8,},
     {"id":{"name":"lose_health","path":"scripts/lose_health/lose_health.yy",},"order":0,},
@@ -90,7 +91,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "bulldog-bash",
