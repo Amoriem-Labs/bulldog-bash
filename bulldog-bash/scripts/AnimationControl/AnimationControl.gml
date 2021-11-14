@@ -1,3 +1,5 @@
+anim_started = false;
+
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
@@ -36,7 +38,8 @@ function AnimationControl(){
 			
 		case STATE_PUNCH:
 			sprite_index = sp_punch;
-			dashReset();
+			fdash = false;
+			bdash = false;
 			break;
 			
 		case STATE_KICK:
