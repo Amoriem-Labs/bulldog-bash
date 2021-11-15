@@ -1,7 +1,7 @@
 // player spawn
 
-p1 = instance_create_layer(room_width/2 - 100, 260, "Instances", obj_player);
-p2 = instance_create_layer(room_width/2 + 100, 260, "Instances", obj_player);
+p1 = instance_create_layer(room_width/2 - STARTING_DISTANCE/2, 260, "Instances", obj_player);
+p2 = instance_create_layer(room_width/2 + STARTING_DISTANCE/2, 260, "Instances", obj_player);
 p2.image_xscale = -1;
 p2.controller = CONT_P2;
 
@@ -13,7 +13,7 @@ p2.opponent = p1;
 p1.character = CHAR_CHUN;
 p2.character = CHAR_SALOVEY;
 
-
+//cam = instance_create_layer(0, 0, "Instances", obj_camera);
 
 with p1
 {
@@ -32,3 +32,5 @@ with p2
 	up = vk_up;
 	down = vk_down;
 }
+
+cam = instance_create_layer(room_width/2, room_height/2, "Instances", obj_camera);
