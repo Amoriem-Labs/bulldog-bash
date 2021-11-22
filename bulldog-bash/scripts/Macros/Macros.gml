@@ -11,7 +11,7 @@
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
-#macro N_JUMPS 5
+#macro N_JUMPS 5 //was 5
 #macro HEALTH_FLASH_SPEED 10
 #macro HEALTH_NUM_FLASHES 2
 #macro STARTING_DISTANCE 850
