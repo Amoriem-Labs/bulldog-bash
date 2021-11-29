@@ -33,8 +33,8 @@ with p2
 	down = vk_down;
 }
 
-
-cam = instance_create_layer(room_width/2, room_height/2, "Instances", obj_camera);
+globalvar cam;
+cam = instance_create_layer(room_width/2, room_height/2, "Interfaces", obj_camera);
 
 //all useless jumpbase shit
 /*jump = false;
