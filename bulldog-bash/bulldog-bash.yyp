@@ -47,6 +47,7 @@
     {"id":{"name":"spr_chun_jump_kick","path":"sprites/spr_chun_jump_kick/spr_chun_jump_kick.yy",},"order":3,},
     {"id":{"name":"spr_chun_jump_punch","path":"sprites/spr_chun_jump_punch/spr_chun_jump_punch.yy",},"order":4,},
     {"id":{"name":"spr_salovey_dash_forward","path":"sprites/spr_salovey_dash_forward/spr_salovey_dash_forward.yy",},"order":7,},
+    {"id":{"name":"spr_win_counter","path":"sprites/spr_win_counter/spr_win_counter.yy",},"order":7,},
     {"id":{"name":"obj_battle_UI","path":"objects/obj_battle_UI/obj_battle_UI.yy",},"order":7,},
     {"id":{"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},"order":0,},
     {"id":{"name":"spr_chun_name","path":"sprites/spr_chun_name/spr_chun_name.yy",},"order":5,},
