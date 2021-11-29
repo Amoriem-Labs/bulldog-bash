@@ -15,3 +15,5 @@ ohl_x = x + 144*ratio; //144, 92 is good! grabbed from sprite img
 ohr_x = x + 736*ratio;
 ohl_y = y + 92*ratio;
 //show_debug_message(string(sprite_width) + " " + string(ratio*(144+399+737)) + " " + string(ratio*399) + " " + string(obj_health_left.sprite_width)); //sw already modified, and ratio*399 is the middle part length scaling
+
+//draw_gui might be better for the interface? idk
