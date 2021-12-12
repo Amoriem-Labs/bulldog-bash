@@ -38,14 +38,20 @@ function AnimationControl(){
 			
 		case STATE_PUNCH:
 			sprite_index = sp_punch;
+			fdash = false;
+			bdash = false;
 			break;
 			
 		case STATE_KICK:
 			sprite_index = sp_kick;
+			fdash = false;
+			bdash = false;
 			break;
 			
 		case STATE_BLOCK:
 			sprite_index = sp_block;
+			fdash = false; 
+			bdash = false;
 			break;
 	}
 }
@@ -67,7 +73,7 @@ function CheckDashing() {
 				dashReset(); 
 			}
 		}
-		else if(kcp(up) or kcp(left) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+		else if(kcp(up) or kcp(left) or kcp(down) or kcp(punch) or kcp(kick) or kcp(block)) { //other keys other than same direction pressed so cancel and reset
 			dashReset();
 		}
 			
@@ -81,7 +87,7 @@ function CheckDashing() {
 				dashReset();
 			}
 		}
-		else if(kcp(up) or kcp(right) or kcp(down)) { //other keys other than same direction pressed so cancel and reset
+		else if(kcp(up) or kcp(right) or kcp(down) or kcp(punch) or kcp(kick) or kcp(block)) { //other keys other than same direction pressed so cancel and reset
 			dashReset();
 		}
 			

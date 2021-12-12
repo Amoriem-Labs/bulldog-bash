@@ -31,3 +31,9 @@
 #macro STATE_FDASH 4
 #macro STATE_BDASH 5
 #endregion
+
+#region //Attack Damage
+#macro PUNCH_DMG 10
+#macro KICK_DMG 10
+#macro SPCL_ATK_DMG 20
+#endregion
