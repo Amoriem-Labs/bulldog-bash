@@ -16,7 +16,7 @@
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.0,
   "physicsAngularDamping": 1.0,
-  "physicsFriction": 4.0,
+  "physicsFriction": 3.0,
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
