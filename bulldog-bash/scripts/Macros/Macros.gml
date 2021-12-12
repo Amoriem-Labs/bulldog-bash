@@ -15,7 +15,7 @@
 #macro HEALTH_FLASH_SPEED 10
 #macro HEALTH_NUM_FLASHES 2
 #macro STARTING_DISTANCE 1000 //was 850
-#macro CHAR_PADDING 100 //was 75
+#macro CHAR_PADDING 125 //was 75 //can tune padding for wall dist from char :)
 #endregion
 
 #region //Controllers

@@ -3,11 +3,12 @@
 
 
 //This leads to jiggly effect cuz delay in var grabbing from cam
-x = cam.newx;
+//DON'T DELETE THIS PLSSSSSSSSSSSSSSSSSS
+/*x = cam.newx;
 y = cam.newy;
 ratio = (cam.x_dist / og_image_width);
 image_xscale = ratio;
-image_yscale = ratio;
+image_yscale = ratio;*/
 
 //health bar alignment
 //ratio*sprite_width = ratio*(144+399+737) = ratio*144 + ratio*399 + ratio*737//at ratio = 1

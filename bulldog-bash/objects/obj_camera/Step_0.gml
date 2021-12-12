@@ -14,8 +14,9 @@ camera_set_view_size(view_camera[0], x_dist, y_dist); //y needs to change
 
 //Setting obj_battle_UI directly so no jiggly effect.
 //potential problem of putting it here is that when making other cam, obj_battle_UI needs to be disabled to avoid showing up
-/*obj_battle_UI.x = newx;
+obj_battle_UI.x = newx;
 obj_battle_UI.y = newy;
 ratio = (x_dist / obj_battle_UI.og_image_width);
+obj_battle_UI.ratio = ratio;
 obj_battle_UI.image_xscale = ratio;
-obj_battle_UI.image_yscale = ratio;*/
+obj_battle_UI.image_yscale = ratio;

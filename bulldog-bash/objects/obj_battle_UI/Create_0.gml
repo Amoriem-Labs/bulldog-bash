@@ -6,6 +6,7 @@
 //gonna do top left so easier to suit cam stuff
 
 og_image_width = sprite_width;
+ratio = 0;
 
 //Name/protrait on the UI should spawn depending on the char that the player picked
 //p1 = left, p2 = right. Don't forget to flip!
