@@ -1,3 +1,3 @@
 /// @description Test Event
 
-lose_health(12, 1);
+LoseHealth(12, 1);

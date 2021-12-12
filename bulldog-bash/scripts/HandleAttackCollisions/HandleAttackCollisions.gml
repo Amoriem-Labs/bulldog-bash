@@ -6,7 +6,7 @@ function HandleAttackCollisions(){
 		case STATE_FREE:
 		break;
 		case STATE_PUNCH:
-		lose_health(PUNCH_DMG, player_attacked);
+		LoseHealth(PUNCH_DMG, player_attacked);
 		break;
 	}
 }

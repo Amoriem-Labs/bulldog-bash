@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "lose_health",
+  "name": "LoseHealth",
   "tags": [],
   "resourceType": "GMScript",
 }
