@@ -35,6 +35,7 @@ with p2
 
 globalvar cam;
 cam = instance_create_layer(room_width/2, room_height/2, "Interfaces", obj_camera);
+fixed_dist = STARTING_DISTANCE;
 
 //all useless jumpbase shit
 /*jump = false;
