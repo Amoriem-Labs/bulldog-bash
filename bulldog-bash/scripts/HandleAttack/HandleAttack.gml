@@ -11,10 +11,13 @@
 	}
 }*/
 
-function HandleAttackCollisions() {
-	if (punch) {
-		with opponent {
-			LoseHealth(PUNCH_DMG);
-		}
+function HandleAttack(attack) {
+	switch (attack) {
+		case punch:
+			with opponent LoseHealth(PUNCH_DMG);
+		break;
+		case kick:
+			with opponent LoseHealth(KICK_DMG);
+		break;
 	}
 }

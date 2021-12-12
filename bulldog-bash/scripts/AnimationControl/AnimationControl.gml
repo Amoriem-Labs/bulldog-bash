@@ -4,13 +4,13 @@ function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
 			// check for attacking anims. Need to change to allow animations to follow through state changes
-			if kc(punch) {
+			if kcp(punch) {
 				state = STATE_PUNCH;
 			}
-			else if kc(kick) {
+			else if kcp(kick) {
 				state = STATE_KICK;
 			}
-			else if kc(block)
+			else if kcp(block)
 			{
 				state = STATE_BLOCK
 			}
