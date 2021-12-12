@@ -11,7 +11,7 @@ if(p1s == 1) {
 newx_dist = -1 * p2s * p2.x - p1s * p1.x + 150;
 newy_dist = 1204 / (room_width / newx_dist); //1204 is room height + slab
 newy = 1204 - newy_dist - 0.085 * (room_width - newx_dist); //the third - expression makes slab zoom
-if(newx_dist > STARTING_DISTANCE) { //helps in arena locking
+if(newx_dist > fixed_dist) { //helps in arena locking
 	oldy = newy;
 }
 
@@ -19,7 +19,8 @@ py1loc = p1.y - p1.sprite_height + 50;
 py2loc = p2.y - p2.sprite_height + 50;
 pyloc = min(py1loc, py2loc); //higher person gets the dib!
 
-if(newx_dist > STARTING_DISTANCE) {
+if(newx_dist > fixed_dist) {
+	fixed_dist = STARTING_DISTANCE;
 	cam.newx = newx;
 	if(pyloc > newy) {
 		cam.newy = newy;
@@ -27,9 +28,10 @@ if(newx_dist > STARTING_DISTANCE) {
 		cam.newy = pyloc;
 	}
 	cam.x_dist = newx_dist; 
-	cam.y_dist = newy_dist; 
+	cam.y_dist = newy_dist;
 }
 else {
+	fixed_dist = cam.x_dist;
 	if(pyloc > oldy) {
 		cam.newy = oldy;
 	} else {
