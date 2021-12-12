@@ -1,3 +1,3 @@
-/// @description Test event
+/// @description show lost health logic
 
-lose_health(12, 1);
+health_lost = 0;
