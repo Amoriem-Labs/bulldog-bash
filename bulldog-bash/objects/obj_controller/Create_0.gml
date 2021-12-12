@@ -13,7 +13,8 @@ p2.opponent = p1;
 p1.character = CHAR_CHUN;
 p2.character = CHAR_SALOVEY;
 
-
+// Create a global list of tasks to run
+schedule = ds_list_create();
 
 with p1
 {
