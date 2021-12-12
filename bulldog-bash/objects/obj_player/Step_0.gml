@@ -9,9 +9,6 @@ AttackControl();
 //animation control
 AnimationControl();
 
-// handle collisions for attacks
-//CollisionAndMovements();
-
 //-----------------------------FOR DASHING--------------------------------//
 //This prevents multidash between dashes (stops checking during animation)
 if(floor(sprite_index) != sp_dash_forward and floor(sprite_index) != sp_dash_backward) { 
