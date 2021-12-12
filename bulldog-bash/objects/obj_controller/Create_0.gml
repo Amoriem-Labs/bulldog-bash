@@ -37,6 +37,23 @@ globalvar cam;
 cam = instance_create_layer(room_width/2, room_height/2, "Interfaces", obj_camera);
 fixed_dist = STARTING_DISTANCE;
 
+final_x = 0;
+final_y = 0;
+final_x_dist = 0;
+final_y_dist = 0;
+
+x_q = ds_queue_create();
+y_q = ds_queue_create();
+x_dist_q = ds_queue_create();
+y_dist_q = ds_queue_create();
+//enqueue 20 empty elems
+for(i=0; i<10; i++) {
+	ds_queue_enqueue(x_q, 0);
+	ds_queue_enqueue(y_q, 0);
+	ds_queue_enqueue(x_dist_q, 0);
+	ds_queue_enqueue(y_dist_q, 0);
+}
+
 //all useless jumpbase shit
 /*jump = false;
 jump_base_y = camera_get_view_y(view_camera[0]);
