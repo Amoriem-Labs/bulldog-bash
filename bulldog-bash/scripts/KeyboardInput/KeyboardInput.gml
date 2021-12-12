@@ -16,21 +16,32 @@ function tryChangeState(newState) {
 }
 
 function playerKeyboardInput() {
-	if (kcp(punch)) {
+	if (kcp(punch) && checkCanAttack()) {
 		tryChangeState(STATE_PUNCH);
 		if (distance_to_object(opponent) <= PUNCH_RADIUS) {
 			HandleAttack(punch);
 		}
-	} else if (kcp(kick)) {
+	} else if (kcp(kick) && checkCanAttack()) {
 		tryChangeState(STATE_KICK);
 		if (distance_to_object(opponent) <= KICK_RADIUS) {
 			HandleAttack(kick);
 		}
-	} else if (kcp(block)) {
+	} else if (kcp(block) && checkCanAttack()) {
 		tryChangeState(STATE_BLOCK);
-	} else if (kcp(spclAtk)) {
+	} else if (kcp(spclAtk) && checkCanAttack()) {
 		if (distance_to_object(opponent) <= SPCL_RADIUS) {
 			HandleAttack(spclAtk);
 		}
 	}
+}
+
+function checkCanAttack() {
+	if (canAttack) {
+		canAttack = false;
+		ScheduleTask(function() {
+			canAttack = true;
+		}, 700);
+		return true;
+	}
+	return false;
 }
