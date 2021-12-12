@@ -4,11 +4,11 @@
 p1s = sign(p1.image_xscale); //for flipsides 
 p2s = sign(p2.image_xscale);
 if(p1s == 1) {
-	newx = p1.x - 75; //camera off set from center of char, 75 rn
+	newx = p1.x - CHAR_PADDING; //camera off set from center of char, 75 rn
 } else {
-	newx = p2.x - 75;
+	newx = p2.x - CHAR_PADDING;
 }
-newx_dist = -1 * p2s * p2.x - p1s * p1.x + 150;
+newx_dist = -1 * p2s * p2.x - p1s * p1.x + 2*CHAR_PADDING;
 newy_dist = 1204 / (room_width / newx_dist); //1204 is room height + slab
 newy = 1204 - newy_dist - 0.085 * (room_width - newx_dist); //the third - expression makes slab zoom
 if(newx_dist > fixed_dist) { //helps in arena locking
@@ -45,24 +45,24 @@ else {
 }
 
 if(p1s == 1) { //positive	
-	if(p1.x < cam.newx + 75) { 	
+	if(p1.x < cam.newx + CHAR_PADDING) { 	
 		//cam.newx = newx;
 		final_x = newx;
 	}
 	//else if (p2.x > cam.newx + cam.x_dist - 75) {
-	else if (p2.x > cam.newx + final_x_dist - 75) {
+	else if (p2.x > cam.newx + final_x_dist - CHAR_PADDING) {
 		//cam.newx = p2.x - cam.x_dist + 75; //more precise version of S_D because might not stop exactly at S_D
-		final_x = p2.x - final_x_dist + 75;
+		final_x = p2.x - final_x_dist + CHAR_PADDING;
 	}
 } else { //flipped
-	if(p2.x < cam.newx + 75) { 	
+	if(p2.x < cam.newx + CHAR_PADDING) { 	
 		//cam.newx = newx;
 		final_x = newx;
 	}
 	//else if (p1.x > cam.newx + cam.x_dist - 75) {
-	else if (p1.x > cam.newx + final_x_dist - 75) {
+	else if (p1.x > cam.newx + final_x_dist - CHAR_PADDING) {
 		//cam.newx = p1.x - cam.x_dist + 75;
-		final_x = p1.x - final_x_dist + 75;
+		final_x = p1.x - final_x_dist + CHAR_PADDING;
 	}
 }
 
@@ -74,19 +74,36 @@ ds_queue_enqueue(x_dist_q, final_x_dist);
 ds_queue_enqueue(y_dist_q, final_y_dist);
 
 //show_debug_message(p1.phy_speed_x);
-if(abs(p1.phy_speed_x) > WALK_SPD * 1.1)  {
+if(abs(p1.phy_speed_x) > WALK_SPD * 1.1 or abs(p2.phy_speed_x) > WALK_SPD * 1.1)  { //change 1.1 if cam is weird
+	if(gap) {
+		gap = false;
+		for(i=0; i<10; i++) {
+			ds_queue_dequeue(x_q);
+			ds_queue_dequeue(y_q);
+			ds_queue_dequeue(x_dist_q);
+			ds_queue_dequeue(y_dist_q);
+		}
+	}
 	cam.newx = final_x;
 	cam.newy = final_y;
 	cam.x_dist = final_x_dist;
 	cam.y_dist = final_y_dist;
 	
-	ds_queue_enqueue(x_q, final_x);
-	ds_queue_enqueue(y_q, final_y);
-	ds_queue_enqueue(x_dist_q, final_x_dist);
-	ds_queue_enqueue(y_dist_q, final_y_dist);
-	
+	ds_queue_dequeue(x_q);
+	ds_queue_dequeue(y_q);
+	ds_queue_dequeue(x_dist_q);
+	ds_queue_dequeue(y_dist_q);
 }
 else {
+	if(not gap) {
+		gap = true;
+		for(i=0; i<10; i++) {
+			ds_queue_enqueue(x_q, final_x);
+			ds_queue_enqueue(y_q, final_y);
+			ds_queue_enqueue(x_dist_q, final_x_dist);
+			ds_queue_enqueue(y_dist_q, final_y_dist);
+		}
+	}
 	cam.newx = ds_queue_dequeue(x_q);
 	cam.newy = ds_queue_dequeue(y_q);
 	cam.x_dist = ds_queue_dequeue(x_dist_q);

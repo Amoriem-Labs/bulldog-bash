@@ -53,6 +53,7 @@ for(i=0; i<10; i++) {
 	ds_queue_enqueue(x_dist_q, 0);
 	ds_queue_enqueue(y_dist_q, 0);
 }
+gap = true;
 
 //all useless jumpbase shit
 /*jump = false;
