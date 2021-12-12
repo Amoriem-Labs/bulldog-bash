@@ -21,39 +21,79 @@ pyloc = min(py1loc, py2loc); //higher person gets the dib!
 
 if(newx_dist > fixed_dist) {
 	fixed_dist = STARTING_DISTANCE;
-	cam.newx = newx;
 	if(pyloc > newy) {
-		cam.newy = newy;
+		//cam.newy = newy;
+		final_y = newy;
 	} else {
-		cam.newy = pyloc;
+		//cam.newy = pyloc;
+		final_y = pyloc;
 	}
-	cam.x_dist = newx_dist; 
-	cam.y_dist = newy_dist;
+	//cam.x_dist = newx_dist; 
+	//cam.y_dist = newy_dist;
+	final_x_dist = newx_dist;
+	final_y_dist = newy_dist;
 }
 else {
 	fixed_dist = cam.x_dist;
 	if(pyloc > oldy) {
-		cam.newy = oldy;
+		//cam.newy = oldy;
+		final_y = oldy;
 	} else {
-		cam.newy = pyloc;
+		//cam.newy = pyloc;
+		final_y = pyloc;
 	}
 }
 
 if(p1s == 1) { //positive	
 	if(p1.x < cam.newx + 75) { 	
-		cam.newx = newx;
+		//cam.newx = newx;
+		final_x = newx;
 	}
-	else if (p2.x > cam.newx + cam.x_dist - 75) {
-		cam.newx = p2.x - cam.x_dist + 75; //more precise version of S_D because might not stop exactly at S_D
+	//else if (p2.x > cam.newx + cam.x_dist - 75) {
+	else if (p2.x > cam.newx + final_x_dist - 75) {
+		//cam.newx = p2.x - cam.x_dist + 75; //more precise version of S_D because might not stop exactly at S_D
+		final_x = p2.x - final_x_dist + 75;
 	}
 } else { //flipped
 	if(p2.x < cam.newx + 75) { 	
-		cam.newx = newx;
+		//cam.newx = newx;
+		final_x = newx;
 	}
-	else if (p1.x > cam.newx + cam.x_dist - 75) {
-		cam.newx = p1.x - cam.x_dist + 75;
+	//else if (p1.x > cam.newx + cam.x_dist - 75) {
+	else if (p1.x > cam.newx + final_x_dist - 75) {
+		//cam.newx = p1.x - cam.x_dist + 75;
+		final_x = p1.x - final_x_dist + 75;
 	}
-}	
+}
+
+
+
+ds_queue_enqueue(x_q, final_x);
+ds_queue_enqueue(y_q, final_y);
+ds_queue_enqueue(x_dist_q, final_x_dist);
+ds_queue_enqueue(y_dist_q, final_y_dist);
+
+//show_debug_message(p1.phy_speed_x);
+if(abs(p1.phy_speed_x) > WALK_SPD * 1.1)  {
+	cam.newx = final_x;
+	cam.newy = final_y;
+	cam.x_dist = final_x_dist;
+	cam.y_dist = final_y_dist;
+	
+	ds_queue_enqueue(x_q, final_x);
+	ds_queue_enqueue(y_q, final_y);
+	ds_queue_enqueue(x_dist_q, final_x_dist);
+	ds_queue_enqueue(y_dist_q, final_y_dist);
+	
+}
+else {
+	cam.newx = ds_queue_dequeue(x_q);
+	cam.newy = ds_queue_dequeue(y_q);
+	cam.x_dist = ds_queue_dequeue(x_dist_q);
+	cam.y_dist = ds_queue_dequeue(y_dist_q);
+}
+
+
 
 //-----------------OLD JUMPBASE IDEA--------------------// this shit btw wasted 24 hrs of my time fuck this 
 /*
