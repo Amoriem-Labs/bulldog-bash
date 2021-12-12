@@ -25,17 +25,25 @@ schedule = ds_list_create();
 with p1
 {
 	HandleSprites(character);
-	right = ord ("D");
 	left = ord ("A");
+	right = ord ("D");
 	up = ord ("W");
 	down = ord ("S");
+	punch = ord ("R");
+	kick = ord ("T");
+	spclAtk = ord ("Y");
+	block = ord ("C");
 }
 	
 with p2
 {
 	HandleSprites(character);
-	right = vk_right;
 	left = vk_left;
+	right = vk_right;
 	up = vk_up;
 	down = vk_down;
+	punch = ord ("N");
+	kick = ord ("M");
+	spclAtk = ord (">");
+	block = ord ("<");
 }
