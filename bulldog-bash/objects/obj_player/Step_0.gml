@@ -3,9 +3,6 @@ just_jumped = false;
 //char control
 CharacterControl();
 
-//attacks
-AttackControl();
-
 //animation control
 AnimationControl();
 

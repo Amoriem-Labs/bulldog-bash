@@ -13,6 +13,7 @@ health = 100;
 dashReset();
 fdash = false; //rightward dashing movements (sorry for bad naming)
 bdash = false; //leftward dashing movements
+
 //-----------------------------FOR DASHING--------------------------------//
 grounded = false;
 jumps_left = 0;
