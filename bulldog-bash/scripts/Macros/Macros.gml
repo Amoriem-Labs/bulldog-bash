@@ -12,8 +12,9 @@
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
 #macro N_JUMPS 1
-#macro HEALTH_FLASH_SPEED 10
-#macro HEALTH_NUM_FLASHES 2
+#macro HEALTH_FLASH_SPEED 3
+#macro HEALTH_NUM_FLASHES 0
+#macro HEALTH_LOSS_STICK_TIME 30
 #endregion
 
 #region //Controllers

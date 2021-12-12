@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description show lost health logic
 // You can write your code in this editor
 
-lose_health(35, 2);
+health_lost = 0;
