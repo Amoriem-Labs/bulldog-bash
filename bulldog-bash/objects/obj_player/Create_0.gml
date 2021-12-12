@@ -7,7 +7,10 @@ opponent = noone;
 
 state = STATE_FREE;
 
-health = 100;
+// Controls whether a player is able to attack
+canAttack = true;
+
+myHealth = 100;
 
 //-----------------------------FOR DASHING--------------------------------//
 dashReset();

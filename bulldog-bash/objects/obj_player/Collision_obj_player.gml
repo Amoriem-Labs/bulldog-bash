@@ -3,4 +3,6 @@
 // Projectiles should be their own objects which we can detect collisions with
 // For melee attacks, we should check for collisions with only attacking parts of opponent
 
-HandleAttackCollisions();
+if (canAttack) {
+	HandleAttackCollisions();
+}

@@ -5,6 +5,12 @@ p2 = instance_create_layer(room_width/2 + 100, 260, "Instances", obj_player);
 p2.image_xscale = -1;
 p2.controller = CONT_P2;
 
+p1.healthBar = instance_create_layer(320, 225, "Instances", obj_healthBar);
+p1.healthBar.owner = p1;
+p2.healthBar = instance_create_layer(1184, 225, "Instances", obj_healthBar);
+p2.healthBar.owner = p2;
+//p2.healthBar.image_xscale = -1;
+
 //setting opponents
 p1.opponent = p2;
 p2.opponent = p1;
