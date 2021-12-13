@@ -1,0 +1,6 @@
+# ignore all DS Store files
+*.DS_Store
+
+# ignore documentation files
+README.md
+bulldog-bash.png
