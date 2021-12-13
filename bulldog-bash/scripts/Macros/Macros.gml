@@ -5,9 +5,9 @@
 
 #region //Game Variables
 #macro GRAVITY_FORCE 0.5
-#macro WALK_SPD 3 //was 6
+#macro WALK_SPD 4.1 //was 3
 #macro SPRINT_SPD 8
-#macro JUMP_FORCE -10
+#macro JUMP_FORCE -38
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
@@ -15,6 +15,8 @@
 #macro HEALTH_FLASH_SPEED 3
 #macro HEALTH_NUM_FLASHES 0
 #macro HEALTH_LOSS_STICK_TIME 30
+#macro STARTING_DISTANCE 1000 //was 850
+#macro CHAR_PADDING 125 //was 75 //can tune padding for wall dist from char :)
 #endregion
 
 #region //Controllers
