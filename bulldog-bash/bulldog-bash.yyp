@@ -33,7 +33,6 @@
     {"id":{"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},"order":14,},
     {"id":{"name":"spr_old_campus","path":"sprites/spr_old_campus/spr_old_campus.yy",},"order":11,},
     {"id":{"name":"kc","path":"scripts/kc/kc.yy",},"order":0,},
-    {"id":{"name":"spr_chun_walk_forward_attemp1","path":"sprites/spr_chun_walk_forward_attemp1/spr_chun_walk_forward_attemp1.yy",},"order":11,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":1,},
     {"id":{"name":"spr_chun_dash_forward","path":"sprites/spr_chun_dash_forward/spr_chun_dash_forward.yy",},"order":10,},
     {"id":{"name":"spr_chun_dash_backward","path":"sprites/spr_chun_dash_backward/spr_chun_dash_backward.yy",},"order":9,},

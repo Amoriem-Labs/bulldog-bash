@@ -5,10 +5,10 @@ p2 = instance_create_layer(room_width/2 + STARTING_DISTANCE/2, 900, "Instances",
 p2.image_xscale = -1;
 p2.controller = CONT_P2;
 
-p1.healthBar = instance_create_layer(320, 225, "Instances", obj_healthBar);
+p1.healthBar = instance_create_layer(187, 135, "Interfaces", obj_healthBar);
 p1.healthBar.owner = p1;
 p1.healthBar.xscaling = 1;
-p2.healthBar = instance_create_layer(1584, 225, "Instances", obj_healthBar);
+p2.healthBar = instance_create_layer(1179, 135, "Interfaces", obj_healthBar);
 p2.healthBar.owner = p2;
 p2.healthBar.xscaling = -1;
 
