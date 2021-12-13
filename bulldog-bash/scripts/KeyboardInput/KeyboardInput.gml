@@ -40,7 +40,7 @@ function checkCanAttack() {
 		canAttack = false;
 		ScheduleTask(function() {
 			canAttack = true;
-		}, 700);
+		}, GLOBAL_ATTACK_COOLDOWN);
 		return true;
 	}
 	return false;

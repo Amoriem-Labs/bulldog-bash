@@ -39,4 +39,5 @@
 #macro KICK_RADIUS 1000
 #macro SPCL_ATK_DMG 20
 #macro SPCL_RADIUS 1000
+#macro GLOBAL_ATTACK_COOLDOWN 300
 #endregion
