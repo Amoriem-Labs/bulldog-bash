@@ -16,9 +16,18 @@ if(p1s == 1) {
 } else {
 	newx = p2.x - CHAR_PADDING;
 }
+if(newx < 0) newx = 0; //left x boundary
+//Since when character hits edge there's no padding, so 2*CHAR_PADDING gave more distance than needed. 
+//Need to scale it down. (Only need to concern such about left wall rn, weird...)
 newx_dist = -1 * p2s * p2.x - p1s * p1.x + 2*CHAR_PADDING;
-newy_dist = 1204 / (room_width / newx_dist); //1204 is room height + slab
-newy = 1204 - newy_dist - 0.085 * (room_width - newx_dist); //the third - expression makes slab zoom
+if(p1.x < 0 + CHAR_PADDING) {
+	newx_dist = newx_dist - (CHAR_PADDING - p1.x);
+} else if(p2.x < 0 + CHAR_PADDING) {
+	newx_dist = newx_dist - (CHAR_PADDING - p2.x);
+}
+if(newx + newx_dist > room_width) newx_dist = room_width - newx; //right x boundary when in smash mode
+newy_dist = room_total_height / (room_width / newx_dist); //1204 is room height + slab
+newy = room_total_height - newy_dist - 0.085 * (room_width - newx_dist); //the third - expression makes slab zoom
 if(newx_dist > fixed_dist) { //helps in arena locking
 	oldy = newy;
 }
@@ -40,6 +49,7 @@ if(newx_dist > fixed_dist) {
 	//cam.y_dist = newy_dist;
 	final_x_dist = newx_dist;
 	final_y_dist = newy_dist;
+	final_x = newx;
 }
 else {
 	fixed_dist = cam.x_dist;
@@ -50,31 +60,56 @@ else {
 		//cam.newy = pyloc;
 		final_y = pyloc;
 	}
+	
+	if(p1s == 1) { //positive	
+		if(p1.x < cam.newx + CHAR_PADDING) { 	
+			//cam.newx = newx;
+			final_x = newx;
+		}
+		//else if (p2.x > cam.newx + cam.x_dist - 75) {
+		else if (p2.x > cam.newx + final_x_dist - CHAR_PADDING) {
+			//cam.newx = p2.x - cam.x_dist + 75; //more precise version of S_D because might not stop exactly at S_D
+			final_x = p2.x - final_x_dist + CHAR_PADDING;
+		}
+	} else { //flipped
+		if(p2.x < cam.newx + CHAR_PADDING) { 	
+			//cam.newx = newx;
+			final_x = newx;
+		}
+		//else if (p1.x > cam.newx + cam.x_dist - 75) {
+		else if (p1.x > cam.newx + final_x_dist - CHAR_PADDING) {
+			//cam.newx = p1.x - cam.x_dist + 75;
+			final_x = p1.x - final_x_dist + CHAR_PADDING;
+		}
+	}
+	//right x boundary when in street fighter mode
+	if(final_x > room_width - final_x_dist) final_x = room_width - final_x_dist; //final... keeps prev data cuz no update!
 }
 
-if(p1s == 1) { //positive	
-	if(p1.x < cam.newx + CHAR_PADDING) { 	
-		//cam.newx = newx;
-		final_x = newx;
-	}
-	//else if (p2.x > cam.newx + cam.x_dist - 75) {
-	else if (p2.x > cam.newx + final_x_dist - CHAR_PADDING) {
-		//cam.newx = p2.x - cam.x_dist + 75; //more precise version of S_D because might not stop exactly at S_D
-		final_x = p2.x - final_x_dist + CHAR_PADDING;
-	}
-} else { //flipped
-	if(p2.x < cam.newx + CHAR_PADDING) { 	
-		//cam.newx = newx;
-		final_x = newx;
-	}
-	//else if (p1.x > cam.newx + cam.x_dist - 75) {
-	else if (p1.x > cam.newx + final_x_dist - CHAR_PADDING) {
-		//cam.newx = p1.x - cam.x_dist + 75;
-		final_x = p1.x - final_x_dist + CHAR_PADDING;
-	}
+if(final_y < 0) final_y = 0; //top y boundary
+
+//camera boundry indicator box code
+/*
+if(final_x < 0) {
+	edge_x = 0;
+} else {
+	edge_x = final_x;
 }
-
-
+if(final_x + final_x_dist > room_width) {
+	edge_xdist = room_width - final_x;
+} else {
+	edge_xdist = final_x_dist;
+}
+if(final_y < 0) {
+	edge_y = 0;
+} else {
+	edge_y = final_y;
+}
+if(final_y + final_y_dist > room_total_height) {
+	edge_ydist = room_total_height - final_y;
+} else {
+	edge_ydist = final_y_dist;
+}*/
 
 ds_queue_enqueue(x_q, final_x);
 ds_queue_enqueue(y_q, final_y);

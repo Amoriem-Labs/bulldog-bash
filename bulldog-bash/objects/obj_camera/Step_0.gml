@@ -10,5 +10,3 @@
 camera_set_view_pos(view_camera[0], newx, newy) //y needs to change
 camera_set_view_size(view_camera[0], x_dist, y_dist); //y needs to change
 
-//show_debug_message(x_dist);
-

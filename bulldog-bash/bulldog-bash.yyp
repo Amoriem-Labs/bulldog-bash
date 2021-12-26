@@ -27,6 +27,7 @@
     {"id":{"name":"obj_shadow","path":"objects/obj_shadow/obj_shadow.yy",},"order":3,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":12,},
     {"id":{"name":"spr_salovey_walk_forward","path":"sprites/spr_salovey_walk_forward/spr_salovey_walk_forward.yy",},"order":10,},
+    {"id":{"name":"spr_edge_tester","path":"sprites/spr_edge_tester/spr_edge_tester.yy",},"order":13,},
     {"id":{"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},"order":6,},
     {"id":{"name":"spr_chun_kick","path":"sprites/spr_chun_kick/spr_chun_kick.yy",},"order":14,},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},"order":2,},

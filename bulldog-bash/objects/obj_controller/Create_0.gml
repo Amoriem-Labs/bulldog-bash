@@ -73,6 +73,12 @@ for(i=0; i<10; i++) {
 }
 gap = true;
 
+//testing camera boundary stuff, corners for debugging
+/*edge_x =0;
+edge_y = 0;
+edge_xdist = 0;
+edge_ydist = 0;*/
+
 //all useless jumpbase shit
 /*jump = false;
 jump_base_y = camera_get_view_y(view_camera[0]);

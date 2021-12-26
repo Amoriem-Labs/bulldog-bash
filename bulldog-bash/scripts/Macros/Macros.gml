@@ -11,12 +11,13 @@
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
-#macro N_JUMPS 1
+#macro N_JUMPS 10
 #macro HEALTH_FLASH_SPEED 3
 #macro HEALTH_NUM_FLASHES 0
 #macro HEALTH_LOSS_STICK_TIME 30
 #macro STARTING_DISTANCE 1000 //was 850
 #macro CHAR_PADDING 125 //was 75 //can tune padding for wall dist from char :)
+#macro room_total_height 1204
 #endregion
 
 #region //Controllers
