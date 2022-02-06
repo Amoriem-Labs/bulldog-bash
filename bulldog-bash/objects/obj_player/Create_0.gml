@@ -28,3 +28,13 @@ just_jumped = false;
 //this makes char over interfaces layer, which has a depth of 0
 depth = -100;
 //also change floor depth so char is over floor ;DDDD
+
+function createProjectile(xpos, ypos, xscale) {
+	proj = instance_create_layer(x+xpos, y+ypos, 0, obj_projectile);
+	with (proj) {
+		speed = 10;
+		direction = image_angle;
+		image_xscale = xscale;
+	}
+}
+	

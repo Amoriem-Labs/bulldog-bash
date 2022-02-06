@@ -47,7 +47,7 @@ with p2
 	down = vk_down;
 	punch = ord ("N");
 	kick = ord ("M");
-	spclAtk = ord (">");
+	spclAtk = 190; //ord (">");
 	block = ord ("<");
 }
 

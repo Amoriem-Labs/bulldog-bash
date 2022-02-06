@@ -30,6 +30,14 @@ function CharacterControl(){
 				if (kcp(down)) {
 					phy_speed_y = FALL_COEF*distance_to_object(obj_floor)*(kc(down));
 				}
+				if (kcp(spclAtk)) { //spclAtk
+					//if(controller == CONT_P1) this also works
+					if (opponent.x > x) {	
+						createProjectile(60, -100, 1);
+					} else {
+						createProjectile(-60, -100, -1);
+					}
+				}
 
 			}
 			break;

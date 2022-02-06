@@ -13,6 +13,7 @@ if(floor(sprite_index) != sp_dash_forward and floor(sprite_index) != sp_dash_bac
 }
 //-----------------------------FOR DASHING--------------------------------//
 
+//show_debug_message(string(x) + " " + string(y));
 	
 if (abs(phy_rotation) > 3) {
 	if (phy_rotation > 0) {

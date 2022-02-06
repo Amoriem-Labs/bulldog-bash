@@ -42,6 +42,10 @@ function AnimationControl(){
 			fdash = false; 
 			bdash = false;
 			break;
+			
+		case STATE_PROJ:
+			show_debug_message("No proj character animations yet");
+			break;
 	}
 }
 
