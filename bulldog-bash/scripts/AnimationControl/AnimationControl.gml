@@ -6,6 +6,7 @@ function AnimationControl(){
 			// check for movement anims
 			if phy_speed_y > 0 {
 				sprite_index = sp_jump;
+				//mask_index = -1;
 			}
 			else if(fdash == true) {
 				setSprite(sp_dash_forward, sp_dash_backward);

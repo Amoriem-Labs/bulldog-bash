@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_void","path":"sprites/spr_void/spr_void.yy",},"order":14,},
     {"id":{"name":"spr_salovey_idle","path":"sprites/spr_salovey_idle/spr_salovey_idle.yy",},"order":1,},
     {"id":{"name":"spr_battle_UI","path":"sprites/spr_battle_UI/spr_battle_UI.yy",},"order":2,},
     {"id":{"name":"spr_chun_char","path":"sprites/spr_chun_char/spr_chun_char.yy",},"order":3,},
