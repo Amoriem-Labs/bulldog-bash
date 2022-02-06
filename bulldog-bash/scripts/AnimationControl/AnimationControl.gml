@@ -3,19 +3,8 @@ anim_started = false;
 function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
-			// check for attacking anims. Need to change to allow animations to follow through state changes
-			if kc(punch) {
-				state = STATE_PUNCH;
-			}
-			else if kc(kick) {
-				state = STATE_KICK;
-			}
-			else if kc(block)
-			{
-				state = STATE_BLOCK
-			}
 			// check for movement anims
-			else if phy_speed_y > 0 {
+			if phy_speed_y > 0 {
 				sprite_index = sp_jump;
 			}
 			else if(fdash == true) {
