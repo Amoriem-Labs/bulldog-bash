@@ -39,10 +39,11 @@
 
 #region //Attack Damage
 #macro PUNCH_DMG 1
-#macro PUNCH_RADIUS 1000
+#macro PUNCH_RADIUS 50
 #macro KICK_DMG 10
-#macro KICK_RADIUS 1000
+#macro KICK_RADIUS 65
 #macro SPCL_ATK_DMG 20
 #macro SPCL_RADIUS 1000
 #macro GLOBAL_ATTACK_COOLDOWN 300
+#macro GLOBAL_MOVE_COOLDOWN 170
 #endregion

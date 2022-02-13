@@ -4,7 +4,7 @@ function AnimationControl(){
 	switch (state) {
 		case STATE_FREE:
 			// check for movement anims
-			if phy_speed_y > 0 {
+			if phy_speed_y > 2 {
 				sprite_index = sp_jump;
 			}
 			else if(fdash == true) {
