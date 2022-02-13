@@ -18,6 +18,7 @@ function CharacterControl(){
 					Dash(-3.6, 2, fdash);
 				}
 			}
+			
 			else {	
 				//movement
 				if (kc(right) || kc(left)) {
@@ -54,6 +55,16 @@ function CharacterControl(){
 					handleSuccessfulAttack(spclAtk);
 				}
 			}
+			// enable jetpack
+			if(kc(fly)) {
+				if(character == CHAR_CHUN) {
+					phy_speed_y = FLY_SPEED;
+				}
+				if(character == CHAR_SALOVEY) {
+					phy_speed_y = FLY_SPEED;
+				}
+				//state = STATE_FLY;
+				}
 			break;
 	}
 	image_xscale = (opponent.x > x) ? 1: -1;

@@ -36,6 +36,7 @@ with p1
 	kick = ord ("T");
 	spclAtk = ord ("Y");
 	block = ord ("C");
+	fly = ord("Q");
 }
 	
 with p2
@@ -49,6 +50,7 @@ with p2
 	kick = ord ("M");
 	spclAtk = ord (">");
 	block = ord ("<");
+	fly = ord("J");
 }
 
 globalvar cam;

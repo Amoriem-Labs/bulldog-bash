@@ -8,6 +8,7 @@
 #macro WALK_SPD 4.1 //was 3
 #macro SPRINT_SPD 8
 #macro JUMP_FORCE -38
+#macro FLY_SPEED -6.1
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
@@ -33,6 +34,7 @@
 #macro STATE_BLOCK 3
 #macro STATE_FDASH 4
 #macro STATE_BDASH 5
+#macro STATE_FLY 6
 #endregion
 
 #region //Attack Damage
