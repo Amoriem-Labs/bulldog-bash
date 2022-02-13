@@ -7,6 +7,7 @@
     {"id":{"name":"AnimationControl","path":"scripts/AnimationControl/AnimationControl.yy",},"order":2,},
     {"id":{"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},"order":13,},
     {"id":{"name":"spr_salovey_kick","path":"sprites/spr_salovey_kick/spr_salovey_kick.yy",},"order":2,},
+    {"id":{"name":"obj_pause_controller","path":"objects/obj_pause_controller/obj_pause_controller.yy",},"order":8,},
     {"id":{"name":"CheckSchedule","path":"scripts/CheckSchedule/CheckSchedule.yy",},"order":4,},
     {"id":{"name":"spr_salovey_name","path":"sprites/spr_salovey_name/spr_salovey_name.yy",},"order":6,},
     {"id":{"name":"spr_salovey_knockback","path":"sprites/spr_salovey_knockback/spr_salovey_knockback.yy",},"order":3,},
@@ -14,6 +15,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":6,},
     {"id":{"name":"spr_salovey_punch","path":"sprites/spr_salovey_punch/spr_salovey_punch.yy",},"order":4,},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},"order":11,},
+    {"id":{"name":"room_pause_menu","path":"rooms/room_pause_menu/room_pause_menu.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":2,},
     {"id":{"name":"spr_salovey_block","path":"sprites/spr_salovey_block/spr_salovey_block.yy",},"order":0,},
     {"id":{"name":"kcp","path":"scripts/kcp/kcp.yy",},"order":1,},
@@ -67,6 +69,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"room_map_old_campus","path":"rooms/room_map_old_campus/room_map_old_campus.yy",},},
+    {"roomId":{"name":"room_pause_menu","path":"rooms/room_pause_menu/room_pause_menu.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

@@ -7,6 +7,14 @@ CheckSchedule();
 // Check for keyboard input
 //KeyboardInput();
 
+// V ------ PAUSE MENU ------ V
+if(kcp(vk_escape)){
+	room_goto(room_pause_menu);
+}
+// V ------ GAME RESTART (TODO: remove when game flow more full-featured) ----- V
+if(kcp(ord("="))){
+	room_restart();	
+}
 
 // V ------ FROM VIEWPORT MERGE ------ V
 p1s = sign(p1.image_xscale); //for flipsides 

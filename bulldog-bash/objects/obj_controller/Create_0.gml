@@ -1,3 +1,6 @@
+// for pause menu: set this room persistent
+room_persistent = true;
+
 // player spawn
 
 p1 = instance_create_layer(room_width/2 - STARTING_DISTANCE/2, 900, "Instances", obj_player);
