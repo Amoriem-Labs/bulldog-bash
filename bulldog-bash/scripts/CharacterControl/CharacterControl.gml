@@ -38,17 +38,17 @@ function CharacterControl(){
 		default:
 			//attacks
 			if (kcp(punch) && checkCanAttack()) {
-				tryChangeState(STATE_PUNCH);
+				setAnimationState(STATE_PUNCH);
 				if (distance_to_object(opponent) <= PUNCH_RADIUS) {
 					handleSuccessfulAttack(punch);
 				}
 			} else if (kcp(kick) && checkCanAttack()) {
-				tryChangeState(STATE_KICK);
+				setAnimationState(STATE_KICK);
 				if (distance_to_object(opponent) <= KICK_RADIUS) {
 					handleSuccessfulAttack(kick);
 				}
 			} else if (kcp(block) && checkCanAttack()) {
-				tryChangeState(STATE_BLOCK);
+				setAnimationState(STATE_BLOCK);
 			} else if (kcp(spclAtk) && checkCanAttack()) {
 				if (distance_to_object(opponent) <= SPCL_RADIUS) {
 					handleSuccessfulAttack(spclAtk);
@@ -59,10 +59,9 @@ function CharacterControl(){
 	image_xscale = (opponent.x > x) ? 1: -1;
 }
 
-function tryChangeState(newState) {
-	if (state == STATE_FREE) {
-		state = newState;
-	}
+function setAnimationState(newState) {
+	state = newState;
+	image_index = 0;
 }
 
 function checkCanAttack() {
