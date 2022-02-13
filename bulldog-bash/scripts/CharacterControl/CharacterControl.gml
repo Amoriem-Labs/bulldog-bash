@@ -1,61 +1,67 @@
 function CharacterControl(){
-	switch (state) {
-		case STATE_FREE:
-			// free state; all movement is possible
-			if (fdash == true) { //hostage other commands, prio dash
-				if(character == CHAR_CHUN) {
-					Dash(3.6, 2, fdash); //Kevin's god code so no need to check reverse
-				}
-				if(character == CHAR_SALOVEY) {
-					Dash(3.6, 2, bdash);
-				}
+	//show_debug_message("canMove = " + string(canMove));
+	if (canMove) {
+		// free state; all movement is possible
+		if (fdash == true) { //hostage other commands, prio dash
+			if(character == CHAR_CHUN) {
+				Dash(3.6, 2, fdash); //Kevin's god code so no need to check reverse
 			}
-			else if (bdash == true) {
-				if(character == CHAR_CHUN) {
-					Dash(-3.6, 2, bdash);
-				}
-				if(character == CHAR_SALOVEY) {
-					Dash(-3.6, 2, fdash);
-				}
+			if(character == CHAR_SALOVEY) {
+				Dash(3.6, 2, bdash);
 			}
-			else {	
-				//movement
-				if (kc(right) || kc(left)) {
-					phy_speed_x = WALK_SPD*(kc(right) - kc(left));
-				}
-				if (kcp(up) && (grounded || jumps_left > 0)) {
-					just_jumped = true;
-					jumps_left -= 1;
-					phy_speed_y = JUMP_FORCE*(kc(up));
-				}
-				if (kcp(down)) {
-					phy_speed_y = FALL_COEF*distance_to_object(obj_floor)*(kc(down));
-				}
+		}
+		else if (bdash == true) {
+			if(character == CHAR_CHUN) {
+				Dash(-3.6, 2, bdash);
+			}
+			if(character == CHAR_SALOVEY) {
+				Dash(-3.6, 2, fdash);
+			}
+		}
+		else {	
+			//movement
+			if (kc(right) || kc(left)) {
+				phy_speed_x = WALK_SPD*(kc(right) - kc(left));
+			}
+			if (kcp(up) && (grounded || jumps_left > 0)) {
+				just_jumped = true;
+				jumps_left -= 1;
+				phy_speed_y = JUMP_FORCE*(kc(up));
+			}
+			if (kcp(down)) {
+				phy_speed_y = FALL_COEF*distance_to_object(obj_floor)*(kc(down));
+			}
 
-			}
-			//break;
-			//we want fallthrough here so the below runs for all states
-		default:
-			//attacks
-			if (kcp(punch) && checkCanAttack()) {
-				setAnimationState(STATE_PUNCH);
-				if (distance_to_object(opponent) <= PUNCH_RADIUS) {
-					handleSuccessfulAttack(punch);
-				}
-			} else if (kcp(kick) && checkCanAttack()) {
-				setAnimationState(STATE_KICK);
-				if (distance_to_object(opponent) <= KICK_RADIUS) {
-					handleSuccessfulAttack(kick);
-				}
-			} else if (kcp(block) && checkCanAttack()) {
-				setAnimationState(STATE_BLOCK);
-			} else if (kcp(spclAtk) && checkCanAttack()) {
-				if (distance_to_object(opponent) <= SPCL_RADIUS) {
-					handleSuccessfulAttack(spclAtk);
-				}
-			}
-			break;
+		}
 	}
+	
+	if (canAttack) {
+		var atk_keypress_registered = true;
+		if (kcp(punch)) {
+			setAnimationState(STATE_PUNCH);
+			if (distance_to_object(opponent) <= PUNCH_RADIUS) {
+				handleSuccessfulAttack(punch);
+			}
+		} else if (kcp(kick)) {
+			setAnimationState(STATE_KICK);
+			if (distance_to_object(opponent) <= KICK_RADIUS) {
+				handleSuccessfulAttack(kick);
+			}
+		} else if (kcp(block)) {
+			setAnimationState(STATE_BLOCK);
+		} else if (kcp(spclAtk)) {
+			if (distance_to_object(opponent) <= SPCL_RADIUS) {
+				handleSuccessfulAttack(spclAtk);
+			}
+		} else {
+			atk_keypress_registered = false;
+		}
+		if (atk_keypress_registered) {
+			beginAttackCooldown();
+			beginMoveCooldown();
+		}
+	}
+	
 	image_xscale = (opponent.x > x) ? 1: -1;
 }
 
@@ -64,15 +70,24 @@ function setAnimationState(newState) {
 	image_index = 0;
 }
 
-function checkCanAttack() {
-	if (canAttack) {
-		canAttack = false;
-		ScheduleTask(function() {
-			canAttack = true;
-		}, GLOBAL_ATTACK_COOLDOWN);
-		return true;
-	}
-	return false;
+function beginAttackCooldown() {
+	// Disable attacks during cooldown
+	canAttack = false;
+	// Set a timer for GLOBAL_ATTACK_COOLDOWN milliseconds
+	// When the timer ends, reenable attacks
+	ScheduleTask(function() {
+		canAttack = true;
+	}, GLOBAL_ATTACK_COOLDOWN);
+}
+
+function beginMoveCooldown() {
+	// Disable movement for a brief duration
+	canMove = false;
+	show_debug_message("canMove = " + string(canMove));
+	// Set a timer to reenable movement after 50 milliseconds
+	ScheduleTask(function() {
+		canMove = true;
+	}, GLOBAL_MOVE_COOLDOWN);
 }
 
 function handleSuccessfulAttack(attack) {
