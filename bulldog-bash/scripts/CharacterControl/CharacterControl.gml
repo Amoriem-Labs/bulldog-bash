@@ -19,6 +19,7 @@ function CharacterControl(){
 				}
 			}
 			else {	
+				//movement
 				if (kc(right) || kc(left)) {
 					phy_speed_x = WALK_SPD*(kc(right) - kc(left));
 				}
@@ -32,10 +33,58 @@ function CharacterControl(){
 				}
 
 			}
+			//break;
+			//we want fallthrough here so the below runs for all states
+		default:
+			//attacks
+			if (kcp(punch) && checkCanAttack()) {
+				tryChangeState(STATE_PUNCH);
+				if (distance_to_object(opponent) <= PUNCH_RADIUS) {
+					handleSuccessfulAttack(punch);
+				}
+			} else if (kcp(kick) && checkCanAttack()) {
+				tryChangeState(STATE_KICK);
+				if (distance_to_object(opponent) <= KICK_RADIUS) {
+					handleSuccessfulAttack(kick);
+				}
+			} else if (kcp(block) && checkCanAttack()) {
+				tryChangeState(STATE_BLOCK);
+			} else if (kcp(spclAtk) && checkCanAttack()) {
+				if (distance_to_object(opponent) <= SPCL_RADIUS) {
+					handleSuccessfulAttack(spclAtk);
+				}
+			}
 			break;
 	}
 	image_xscale = (opponent.x > x) ? 1: -1;
-	
+}
+
+function tryChangeState(newState) {
+	if (state == STATE_FREE) {
+		state = newState;
+	}
+}
+
+function checkCanAttack() {
+	if (canAttack) {
+		canAttack = false;
+		ScheduleTask(function() {
+			canAttack = true;
+		}, GLOBAL_ATTACK_COOLDOWN);
+		return true;
+	}
+	return false;
+}
+
+function handleSuccessfulAttack(attack) {
+	switch (attack) {
+		case punch:
+			with opponent LoseHealth(PUNCH_DMG);
+		break;
+		case kick:
+			with opponent LoseHealth(KICK_DMG);
+		break;
+	}
 }
 
 //-----------------------------FOR DASHING--------------------------------//
