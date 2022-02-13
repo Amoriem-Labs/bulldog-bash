@@ -71,8 +71,7 @@ function CharacterControl(){
 			phy_speed_y = FLY_SPEED;
 		}
 		//state = STATE_FLY;
-		}
-	break;
+	}
 	
 	image_xscale = (opponent.x > x) ? 1: -1;
 }
