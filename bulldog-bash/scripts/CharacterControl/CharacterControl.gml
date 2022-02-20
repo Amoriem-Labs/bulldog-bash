@@ -62,15 +62,29 @@ function CharacterControl(){
 		}
 	}
 
-	// enable jetpack
-	if(kc(fly)) {
-		if(character == CHAR_CHUN) {
+	// jetpack enabled
+	if (kc(fly)) {
+		// check fuel and cooldown
+		if (checkCanFly()) {
+			canAttack = false;
+			isFlying = true;
+			state = STATE_FLY;
+			fuel = fuel - FUEL_DRAIN;
 			phy_speed_y = FLY_SPEED;
 		}
-		if(character == CHAR_SALOVEY) {
-			phy_speed_y = FLY_SPEED;
+		else {
+			// may want to notify player why they can't fly
 		}
-		//state = STATE_FLY;
+	}
+	
+	if (kcr(fly) && isFlying) {
+		canAttack = true;
+		isFlying = false;
+		state = STATE_FREE;
+	}
+	
+	if (!(isFlying)) {
+		fuel = min(fuel + FUEL_REGEN, MAX_FUEL)
 	}
 	
 	image_xscale = (opponent.x > x) ? 1: -1;
@@ -140,4 +154,19 @@ function createShadow() {
 }
 	
 //-----------------------------FOR DASHING--------------------------------//	
+
+//-----------------------------FOR JETPACK--------------------------------//	
+
+function checkCanFly() {
+	if (isFlying && fuel > 0) {
+		return true;
+	}
+	// is fuel was all used, need to wait for some regen before flying again
+	else if (!(isFlying) && fuel >= 0.2 * MAX_FUEL) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 	

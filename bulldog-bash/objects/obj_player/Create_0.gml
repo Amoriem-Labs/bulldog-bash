@@ -33,4 +33,5 @@ depth = -100;
 //also change floor depth so char is over floor ;DDDD
 
 //-----------------------------FOR JETPACK--------------------------------//
-//fly = false;
+isFlying = false;
+fuel = MAX_FUEL;

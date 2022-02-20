@@ -47,3 +47,9 @@
 #macro GLOBAL_ATTACK_COOLDOWN 300
 #macro GLOBAL_MOVE_COOLDOWN 170
 #endregion
+
+#region //Jetpack constants
+#macro MAX_FUEL 100
+#macro FUEL_DRAIN 1
+#macro FUEL_REGEN 0.1
+#endregion
