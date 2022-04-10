@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"spr_salovey_idle","path":"sprites/spr_salovey_idle/spr_salovey_idle.yy",},"order":1,},
     {"id":{"name":"spr_battle_UI","path":"sprites/spr_battle_UI/spr_battle_UI.yy",},"order":2,},
+    {"id":{"name":"CheckDeath","path":"scripts/CheckDeath/CheckDeath.yy",},"order":6,},
     {"id":{"name":"spr_chun_char","path":"sprites/spr_chun_char/spr_chun_char.yy",},"order":3,},
     {"id":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"order":1,},
     {"id":{"name":"AnimationControl","path":"scripts/AnimationControl/AnimationControl.yy",},"order":2,},
@@ -51,6 +52,7 @@
     {"id":{"name":"spr_salovey_walk_backward","path":"sprites/spr_salovey_walk_backward/spr_salovey_walk_backward.yy",},"order":9,},
     {"id":{"name":"spr_chun_name","path":"sprites/spr_chun_name/spr_chun_name.yy",},"order":5,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":6,},
+    {"id":{"name":"EndGame","path":"scripts/EndGame/EndGame.yy",},"order":5,},
     {"id":{"name":"CharacterControl","path":"scripts/CharacterControl/CharacterControl.yy",},"order":1,},
   ],
   "Options": [
@@ -59,7 +61,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "isDnDProject": false,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
@@ -93,13 +95,13 @@
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.1.1.610",
+    "IDEVersion": "2022.3.0.625",
   },
-  "resourceVersion": "1.4",
+  "resourceVersion": "1.5",
   "name": "bulldog-bash",
   "tags": [],
   "resourceType": "GMProject",

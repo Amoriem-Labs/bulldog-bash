@@ -1,3 +1,5 @@
+show_debug_message("My position at start: " + string(x));
+
 just_jumped = false;
 
 //char control
@@ -26,3 +28,5 @@ if (abs(phy_rotation) > 3) {
 phy_angular_velocity = 0;
 
 grounded = false;
+
+show_debug_message("My position at end: " + string(x));

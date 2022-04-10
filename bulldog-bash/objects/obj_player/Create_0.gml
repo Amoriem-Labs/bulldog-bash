@@ -16,8 +16,6 @@ canMove = true;
 // Player-specific instance variable for health
 myHealth = 100;
 
-win_counter = 0;
-
 //-----------------------------FOR DASHING--------------------------------//
 dashReset();
 fdash = false; //rightward dashing movements (sorry for bad naming)
