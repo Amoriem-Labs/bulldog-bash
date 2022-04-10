@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_char","path":"sprites/spr_salovey_char/spr_salovey_char.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_char",
     "tags": [],
     "resourceType": "GMSequence",

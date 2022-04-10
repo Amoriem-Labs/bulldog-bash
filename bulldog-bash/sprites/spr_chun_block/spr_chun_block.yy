@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_block","path":"sprites/spr_chun_block/spr_chun_block.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_block",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_knockback","path":"sprites/spr_chun_knockback/spr_chun_knockback.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_knockback",
     "tags": [],
     "resourceType": "GMSequence",

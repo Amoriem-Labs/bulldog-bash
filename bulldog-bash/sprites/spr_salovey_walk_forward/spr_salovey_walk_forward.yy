@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_walk_forward","path":"sprites/spr_salovey_walk_forward/spr_salovey_walk_forward.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_walk_forward",
     "tags": [],
     "resourceType": "GMSequence",

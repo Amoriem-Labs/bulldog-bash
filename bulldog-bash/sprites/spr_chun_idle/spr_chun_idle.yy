@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_idle","path":"sprites/spr_chun_idle/spr_chun_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_idle",
     "tags": [],
     "resourceType": "GMSequence",

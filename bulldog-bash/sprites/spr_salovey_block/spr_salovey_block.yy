@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_block","path":"sprites/spr_salovey_block/spr_salovey_block.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_block",
     "tags": [],
     "resourceType": "GMSequence",

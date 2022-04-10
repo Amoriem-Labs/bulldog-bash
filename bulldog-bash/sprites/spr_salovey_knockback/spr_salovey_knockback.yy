@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_knockback","path":"sprites/spr_salovey_knockback/spr_salovey_knockback.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_knockback",
     "tags": [],
     "resourceType": "GMSequence",

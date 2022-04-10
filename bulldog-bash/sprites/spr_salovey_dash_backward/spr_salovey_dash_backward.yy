@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_dash_backward","path":"sprites/spr_salovey_dash_backward/spr_salovey_dash_backward.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_dash_backward",
     "tags": [],
     "resourceType": "GMSequence",
