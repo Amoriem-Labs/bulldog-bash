@@ -8,6 +8,21 @@ if (visible) {
 	if (kcp(player.down)) {
 		change_menu_option(menu_option, menu_option + 1);
 	}
+	if (kcp(player.punch)) {
+		switch (menu_option) {
+			case 0: // Continue
+				obj_controller.unpause();
+			break;
+			case 1: // Options
+			break;
+			case 2: // Restart Match
+			break;
+			case 3: // Character Select
+			break;
+			case 4: // Main Menu
+			break;
+		}
+	}
 }
 
 function change_menu_option(old_index, new_index) {
