@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_char","path":"sprites/spr_chun_char/spr_chun_char.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_char",
     "tags": [],
     "resourceType": "GMSequence",

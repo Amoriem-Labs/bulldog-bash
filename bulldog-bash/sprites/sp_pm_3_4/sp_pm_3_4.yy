@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_pm_3_4","path":"sprites/sp_pm_3_4/sp_pm_3_4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_pm_3_4",
     "tags": [],
     "resourceType": "GMSequence",

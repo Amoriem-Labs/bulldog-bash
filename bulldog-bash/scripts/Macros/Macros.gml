@@ -1,6 +1,7 @@
 #region //Characters
 #macro CHAR_CHUN 0
 #macro CHAR_SALOVEY 1
+#macro N_CHARACTERS 2
 #endregion
 
 #region //Game Variables
@@ -18,6 +19,7 @@
 #macro STARTING_DISTANCE 1000 //was 850
 #macro CHAR_PADDING 125 //was 75 //can tune padding for wall dist from char :)
 #macro room_total_height 1204
+
 #endregion
 
 #region //Controllers
@@ -44,4 +46,10 @@
 #macro SPCL_RADIUS 1000
 #macro GLOBAL_ATTACK_COOLDOWN 300
 #macro GLOBAL_MOVE_COOLDOWN 170
+#endregion
+
+#region //char select
+#macro STATE_CHAR_SELECT 0
+#macro STATE_STAGE_SELECT 1
+#macro STATE_DONE_SELECT 2
 #endregion

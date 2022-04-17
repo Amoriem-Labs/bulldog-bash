@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_punch","path":"sprites/spr_salovey_punch/spr_salovey_punch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_punch",
     "tags": [],
     "resourceType": "GMSequence",

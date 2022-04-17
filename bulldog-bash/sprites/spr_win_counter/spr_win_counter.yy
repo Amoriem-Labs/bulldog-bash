@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_win_counter","path":"sprites/spr_win_counter/spr_win_counter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_win_counter",
     "tags": [],
     "resourceType": "GMSequence",

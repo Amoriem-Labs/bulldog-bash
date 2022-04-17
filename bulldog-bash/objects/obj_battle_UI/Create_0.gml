@@ -13,7 +13,7 @@ ratio = 0;
 
 
 //just in case of two people pick the same/diff char
-switch (obj_controller.p1.character) {
+switch (global.p1_char) {
 	case CHAR_CHUN:
 		p1char = spr_chun_char;
 		p1name = spr_chun_name;
@@ -24,7 +24,7 @@ switch (obj_controller.p1.character) {
 		break;
 }
 
-switch (obj_controller.p2.character) {
+switch (global.p2_char) {
 	case CHAR_CHUN:
 		p2char = spr_chun_char;
 		p2name = spr_chun_name;

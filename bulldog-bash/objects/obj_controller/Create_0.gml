@@ -1,3 +1,4 @@
+/// @description Insert description here
 // for pause menu: set this room persistent
 room_persistent = true;
 
@@ -19,9 +20,12 @@ p2.healthBar.xscaling = -1;
 p1.opponent = p2;
 p2.opponent = p1;
 
+show_debug_message("created controller!")
+
 //set player sprites
-p1.character = CHAR_CHUN;
-p2.character = CHAR_SALOVEY;
+p1.character = global.p1_char;
+p2.character = global.p2_char;
+
 
 // Whether the game is paused
 paused = false;

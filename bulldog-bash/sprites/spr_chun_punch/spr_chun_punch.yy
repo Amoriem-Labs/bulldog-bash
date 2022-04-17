@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_punch",
     "tags": [],
     "resourceType": "GMSequence",

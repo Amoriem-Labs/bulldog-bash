@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_walk_backward","path":"sprites/spr_chun_walk_backward/spr_chun_walk_backward.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_walk_backward",
     "tags": [],
     "resourceType": "GMSequence",

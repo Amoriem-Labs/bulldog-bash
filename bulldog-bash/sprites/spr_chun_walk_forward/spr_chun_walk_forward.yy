@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_walk_forward","path":"sprites/spr_chun_walk_forward/spr_chun_walk_forward.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_walk_forward",
     "tags": [],
     "resourceType": "GMSequence",
