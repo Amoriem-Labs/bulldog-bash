@@ -1,3 +1,5 @@
+/// @description Insert description here
+// You can write your code in this editor
 // player spawn
 
 p1 = instance_create_layer(room_width/2 - STARTING_DISTANCE/2, 900, "Instances", obj_player);
@@ -16,9 +18,12 @@ p2.healthBar.xscaling = -1;
 p1.opponent = p2;
 p2.opponent = p1;
 
+show_debug_message("created controller!")
+
 //set player sprites
-p1.character = CHAR_CHUN;
-p2.character = CHAR_SALOVEY;
+p1.character = global.p1_char;
+p2.character = global.p2_char;
+
 
 // Create a global list of tasks to run
 global.schedule = ds_list_create();
