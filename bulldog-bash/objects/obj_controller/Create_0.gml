@@ -1,3 +1,6 @@
+// for pause menu: set this room persistent
+room_persistent = true;
+
 // player spawn
 
 p1 = instance_create_layer(room_width/2 - STARTING_DISTANCE/2, 900, "Instances", obj_player);
@@ -20,6 +23,9 @@ p2.opponent = p1;
 p1.character = CHAR_CHUN;
 p2.character = CHAR_SALOVEY;
 
+// Whether the game is paused
+paused = false;
+
 // Create a global list of tasks to run
 global.schedule = ds_list_create();
 
@@ -36,6 +42,7 @@ with p1
 	kick = ord ("T");
 	spclAtk = ord ("Y");
 	block = ord ("C");
+	pause_key = vk_escape;
 }
 	
 with p2
@@ -49,6 +56,7 @@ with p2
 	kick = ord ("M");
 	spclAtk = ord (">");
 	block = ord ("<");
+	pause_key = ord ("P");
 }
 
 globalvar cam;
