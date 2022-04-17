@@ -109,7 +109,6 @@
     {"folderPath":"folders/Sprites/chun.yy","order":1,"resourceVersion":"1.0","name":"chun","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Shortcuts.yy","order":0,"resourceVersion":"1.0","name":"Shortcuts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Characters.yy","order":2,"resourceVersion":"1.0","name":"Characters","tags":[],"resourceType":"GMFolder",},
-    // {"folderPath":"folders/Sprites/map & ui.yy","order":4,"resourceVersion":"1.0","name":"map & ui","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/char_map_select.yy","order":7,"resourceVersion":"1.0","name":"char_map_select","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/char_map_select.yy","order":8,"resourceVersion":"1.0","name":"char_map_select","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/map & ui.yy","order":12,"resourceVersion":"1.0","name":"map & ui","tags":[],"resourceType":"GMFolder",},
