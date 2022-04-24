@@ -9,6 +9,13 @@ p2 = instance_create_layer(room_width/2 + STARTING_DISTANCE/2, 900, "Instances",
 p2.image_xscale = -1;
 p2.controller = CONT_P2;
 
+// I haven't figured out how to instantiate these while using them above
+// If you change the first two lines change these ones too!!!!!!!!!!
+p1.startX = room_width/2 - STARTING_DISTANCE/2;
+p2.startX = room_width/2 + STARTING_DISTANCE/2;
+p1.startY = 900;
+p2.startY = 900;
+
 p1.healthBar = instance_create_layer(187, 135, "Interfaces", obj_healthBar);
 p1.healthBar.owner = p1;
 p1.healthBar.xscaling = 1;
@@ -16,8 +23,13 @@ p2.healthBar = instance_create_layer(1179, 135, "Interfaces", obj_healthBar);
 p2.healthBar.owner = p2;
 p2.healthBar.xscaling = -1;
 
+p1.win_counter = 0;
+p2.win_counter = 0;
+
 //setting opponents
+p1.ownSelf = p1;
 p1.opponent = p2;
+p2.ownSelf = p2;
 p2.opponent = p1;
 
 show_debug_message("created controller!")
