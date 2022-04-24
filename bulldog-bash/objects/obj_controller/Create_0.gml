@@ -72,8 +72,8 @@ with p2
 	down = vk_down;
 	punch = ord ("N");
 	kick = ord ("M");
-	spclAtk = ord (">");
-	block = ord ("<");
+	spclAtk = ord ("K");
+	block = ord ("J");
 	pause_key = ord ("P");
 }
 

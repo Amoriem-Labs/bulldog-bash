@@ -50,8 +50,19 @@ function CharacterControl(){
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
 		} else if (kcp(spclAtk)) {
-			if (distance_to_object(opponent) <= SPCL_RADIUS) {
-				handleSuccessfulAttack(spclAtk);
+			setAnimationState(STATE_SPECIAL);
+			if (character == CHAR_SALOVEY) {
+				// Book is just a garden-variety attack, but with a delay!
+				ScheduleTask(function () {
+					if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+						handleSuccessfulAttack(spclAtk);
+					}
+				}, 800);
+			} else if (character == CHAR_CHUN) {
+				// Fire the projectile
+				// The projectile will then check for collisions
+				// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
+				// But it'll call it from Chun to his opponent!
 			}
 		} else {
 			atk_keypress_registered = false;
@@ -101,7 +112,18 @@ function handleSuccessfulAttack(attack) {
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	
-		break
+		break;
+		case spclAtk:
+			if (character == CHAR_SALOVEY) {
+				with opponent {
+					LoseHealth(SPCL_SALOVEY_DMG);
+				}
+			} else if (character == CHAR_CHUN) {
+				with opponent {
+					LoseHealth(SPCL_CHUN_DMG);
+				}
+			}
+		break;
 	}
 	if (opponent.myHealth <= 0) {
 		win_counter += 1;
