@@ -50,19 +50,22 @@ function CharacterControl(){
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
 		} else if (kcp(spclAtk)) {
-			setAnimationState(STATE_SPECIAL);
-			if (character == CHAR_SALOVEY) {
-				// Book is just a garden-variety attack, but with a delay!
-				ScheduleTask(function () {
-					if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
-						handleSuccessfulAttack(spclAtk);
-					}
-				}, 800);
-			} else if (character == CHAR_CHUN) {
-				// Fire the projectile
-				// The projectile will then check for collisions
-				// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
-				// But it'll call it from Chun to his opponent!
+			if (specialCooldown == 0) {
+				setAnimationState(STATE_SPECIAL);
+				if (character == CHAR_SALOVEY) {
+					// Book is just a garden-variety attack, but with a delay!
+					ScheduleTask(function () {
+						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+							handleSuccessfulAttack(spclAtk);
+						}
+					}, 800);
+					specialCooldown = 100;
+				} else if (character == CHAR_CHUN) {
+					// Fire the projectile
+					// The projectile will then check for collisions
+					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
+					// But it'll call it from Chun to his opponent!
+				}
 			}
 		} else {
 			atk_keypress_registered = false;
@@ -73,6 +76,9 @@ function CharacterControl(){
 		}
 	}
 	
+	if (specialCooldown > 0) {
+		specialCooldown --;
+	}
 	image_xscale = (opponent.x > x) ? 1: -1;
 }
 

@@ -10,6 +10,9 @@ state = STATE_FREE;
 // Controls whether a player is able to attack
 canAttack = true;
 
+// Controls whether a player can use their special
+specialCooldown = 100;
+
 // Controls whether a player can move
 canMove = true;
 
