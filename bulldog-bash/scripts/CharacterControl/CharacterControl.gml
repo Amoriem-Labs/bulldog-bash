@@ -100,13 +100,11 @@ function handleSuccessfulAttack(attack) {
 		case kick:
 			with opponent {
 				LoseHealth(KICK_DMG);
-			}
-			
-			
+			}	
 		break
 	}
 	if (opponent.myHealth <= 0) {
-		ownSelf.win_counter += 1;
+		win_counter += 1;
 		ResetChar(ownSelf);
 		ResetChar(opponent);
 	}
