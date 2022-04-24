@@ -8,8 +8,8 @@ function CheckDeath(){
 		phy_speed_x = 0;
 		phy_speed_y = 0;
 		phy_angular_velocity = 0;
-		x = startX;
-		y = startY;
+		phy_position_x = startX;
+		phy_position_y = startY;
 		show_debug_message("I died!");
 		return 1;
 	} else {

@@ -1,5 +1,5 @@
 function CharacterControl(){
-	//show_debug_message("canMove = " + string(canMove));
+	// show_debug_message("canMove = " + string(canMove));
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
