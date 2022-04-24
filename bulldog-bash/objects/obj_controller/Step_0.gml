@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if ((p1.win_counter >= 2) or (p2.win_counter >= 2)) and !game_ended {
+	if p1.win_counter > p2.win_counter {
+		winner = p1;
+	}
+	else {
+		winner = p2;
+	}
+	EndGame();
+}
+
 // Check to see if any scheduled tasks are up for execution
 CheckSchedule();
 

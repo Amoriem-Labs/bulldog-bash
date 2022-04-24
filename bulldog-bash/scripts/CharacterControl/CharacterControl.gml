@@ -105,11 +105,22 @@ function beginMoveCooldown() {
 function handleSuccessfulAttack(attack) {
 	switch (attack) {
 		case punch:
-			with opponent LoseHealth(PUNCH_DMG);
+			with opponent {
+				LoseHealth(PUNCH_DMG);
+			}
 		break;
 		case kick:
-			with opponent LoseHealth(KICK_DMG);
-		break;
+			with opponent {
+				LoseHealth(KICK_DMG);
+			}	
+		break
+	}
+	if (opponent.myHealth <= 0) {
+		win_counter += 1;
+		if win_counter < 2 {
+			ResetChar(ownSelf);
+			ResetChar(opponent);
+		}
 	}
 }
 

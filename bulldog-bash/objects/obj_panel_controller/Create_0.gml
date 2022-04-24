@@ -24,4 +24,6 @@ portraits[1] = instance_find(obj_select_salovey, 0)
 state = STATE_CHAR_SELECT
 p1_selector.controller = self
 p2_selector.controller = self
+
+elapsed = 0
 show_debug_message("controller initialized")
