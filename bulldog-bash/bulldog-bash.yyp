@@ -4,6 +4,7 @@
     {"id":{"name":"room_char_map_select","path":"rooms/room_char_map_select/room_char_map_select.yy",},"order":2,},
     {"id":{"name":"obj_fight_splash_controller","path":"objects/obj_fight_splash_controller/obj_fight_splash_controller.yy",},"order":11,},
     {"id":{"name":"spr_battle_UI","path":"sprites/spr_battle_UI/spr_battle_UI.yy",},"order":2,},
+    {"id":{"name":"ResetChar","path":"scripts/ResetChar/ResetChar.yy",},"order":6,},
     {"id":{"name":"obj_select_chun","path":"objects/obj_select_chun/obj_select_chun.yy",},"order":1,},
     {"id":{"name":"spr_chun_char","path":"sprites/spr_chun_char/spr_chun_char.yy",},"order":3,},
     {"id":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"order":1,},
@@ -76,6 +77,7 @@
     {"id":{"name":"spr_salovey_walk_backward","path":"sprites/spr_salovey_walk_backward/spr_salovey_walk_backward.yy",},"order":9,},
     {"id":{"name":"spr_chun_name","path":"sprites/spr_chun_name/spr_chun_name.yy",},"order":5,},
     {"id":{"name":"spr_chun_punch","path":"sprites/spr_chun_punch/spr_chun_punch.yy",},"order":6,},
+    {"id":{"name":"EndGame","path":"scripts/EndGame/EndGame.yy",},"order":5,},
     {"id":{"name":"CharacterControl","path":"scripts/CharacterControl/CharacterControl.yy",},"order":1,},
   ],
   "Options": [

@@ -1,5 +1,5 @@
 function CharacterControl(){
-	//show_debug_message("canMove = " + string(canMove));
+	// show_debug_message("canMove = " + string(canMove));
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -93,11 +93,20 @@ function beginMoveCooldown() {
 function handleSuccessfulAttack(attack) {
 	switch (attack) {
 		case punch:
-			with opponent LoseHealth(PUNCH_DMG);
+			with opponent {
+				LoseHealth(PUNCH_DMG);
+			}
 		break;
 		case kick:
-			with opponent LoseHealth(KICK_DMG);
-		break;
+			with opponent {
+				LoseHealth(KICK_DMG);
+			}	
+		break
+	}
+	if (opponent.myHealth <= 0) {
+		win_counter += 1;
+		ResetChar(ownSelf);
+		ResetChar(opponent);
 	}
 }
 
