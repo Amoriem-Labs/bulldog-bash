@@ -11,6 +11,37 @@ CheckSchedule();
 // Check for keyboard input
 //KeyboardInput();
 
+// V ------ PAUSE MENU ------ V
+if (!paused) {
+	if (kcp(p1.pause_key)) {
+		pause(p1);
+	}
+	if (kcp(p2.pause_key)) {
+		pause(p2);
+	}
+} else if (paused and kcp(obj_pause_menu.player.pause_key)) {
+	unpause();
+}
+
+function pause(player) {
+	paused = true;
+	physics_pause_enable(true);
+	p1.image_speed = 0;
+	p2.image_speed = 0;
+	obj_pause_menu.open(player);
+}
+function unpause() {
+	obj_pause_menu.close();
+	physics_pause_enable(false);
+	p1.image_speed = 1;
+	p2.image_speed = 1;
+	paused = false;
+}
+
+// V ------ GAME RESTART (TODO: remove when game flow more full-featured) ----- V
+if(kcp(ord("="))){
+	room_restart();	
+}
 
 // V ------ FROM VIEWPORT MERGE ------ V
 p1s = sign(p1.image_xscale); //for flipsides 
