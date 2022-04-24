@@ -1,6 +1,6 @@
 /// @description Insert description here
 // for pause menu: set this room persistent
-room_persistent = true;
+//room_persistent = true;
 
 // player spawn
 
@@ -22,6 +22,8 @@ p1.healthBar.xscaling = 1;
 p2.healthBar = instance_create_layer(1179, 135, "Interfaces", obj_healthBar);
 p2.healthBar.owner = p2;
 p2.healthBar.xscaling = -1;
+
+game_ended = false
 
 p1.win_counter = 0;
 p2.win_counter = 0;

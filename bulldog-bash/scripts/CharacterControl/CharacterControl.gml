@@ -105,8 +105,10 @@ function handleSuccessfulAttack(attack) {
 	}
 	if (opponent.myHealth <= 0) {
 		win_counter += 1;
-		ResetChar(ownSelf);
-		ResetChar(opponent);
+		if win_counter < 2 {
+			ResetChar(ownSelf);
+			ResetChar(opponent);
+		}
 	}
 }
 
