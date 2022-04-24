@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_kick","path":"sprites/spr_chun_kick/spr_chun_kick.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_kick",
     "tags": [],
     "resourceType": "GMSequence",

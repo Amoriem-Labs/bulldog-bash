@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_old_campus","path":"sprites/spr_old_campus/spr_old_campus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_old_campus",
     "tags": [],
     "resourceType": "GMSequence",

@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_walk_backward","path":"sprites/spr_salovey_walk_backward/spr_salovey_walk_backward.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_walk_backward",
     "tags": [],
     "resourceType": "GMSequence",

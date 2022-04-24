@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_salovey_kick","path":"sprites/spr_salovey_kick/spr_salovey_kick.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_salovey_kick",
     "tags": [],
     "resourceType": "GMSequence",

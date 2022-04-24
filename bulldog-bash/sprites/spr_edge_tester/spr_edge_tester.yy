@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_edge_tester","path":"sprites/spr_edge_tester/spr_edge_tester.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_edge_tester",
     "tags": [],
     "resourceType": "GMSequence",

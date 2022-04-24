@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_chun_jump","path":"sprites/spr_chun_jump/spr_chun_jump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_chun_jump",
     "tags": [],
     "resourceType": "GMSequence",
