@@ -1,4 +1,5 @@
 function CharacterControl(){
+	show_debug_message("y = " + string(y));
 	//show_debug_message("canMove = " + string(canMove));
 	if (canMove) {
 		// free state; all movement is possible
@@ -61,30 +62,18 @@ function CharacterControl(){
 			beginMoveCooldown();
 		}
 	}
-
-	// jetpack enabled
-	if (kc(fly)) {
-		// check fuel and cooldown
-		if (checkCanFly()) {
-			canAttack = false;
-			isFlying = true;
-			state = STATE_FLY;
-			fuel = fuel - FUEL_DRAIN;
-			phy_speed_y = FLY_SPEED;
-		}
-		else {
-			// may want to notify player why they can't fly
-		}
-	}
 	
-	if (kcr(fly) && isFlying) {
+	if (kc(fly) && fuel > 0) {
+		phy_speed_y = FLY_SPEED;
+		fuel -= FUEL_DRAIN;
+		state = STATE_FLY;
+		canAttack = false;
+	} else if (!kc(fly)) {
 		canAttack = true;
-		isFlying = false;
 		state = STATE_FREE;
-	}
-	
-	if (!(isFlying)) {
-		fuel = min(fuel + FUEL_REGEN, MAX_FUEL)
+		if (fuel < MAX_FUEL) {
+			fuel += FUEL_REGEN;
+		}
 	}
 	
 	image_xscale = (opponent.x > x) ? 1: -1;
@@ -108,7 +97,7 @@ function beginAttackCooldown() {
 function beginMoveCooldown() {
 	// Disable movement for a brief duration
 	canMove = false;
-	show_debug_message("canMove = " + string(canMove));
+	//show_debug_message("canMove = " + string(canMove));
 	// Set a timer to reenable movement after 50 milliseconds
 	ScheduleTask(function() {
 		canMove = true;
@@ -154,19 +143,4 @@ function createShadow() {
 }
 	
 //-----------------------------FOR DASHING--------------------------------//	
-
-//-----------------------------FOR JETPACK--------------------------------//	
-
-function checkCanFly() {
-	if (isFlying && fuel > 0) {
-		return true;
-	}
-	// is fuel was all used, need to wait for some regen before flying again
-	else if (!(isFlying) && fuel >= 0.2 * MAX_FUEL) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
 	
