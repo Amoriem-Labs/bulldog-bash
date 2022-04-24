@@ -93,11 +93,13 @@ function beginMoveCooldown() {
 function handleSuccessfulAttack(attack) {
 	switch (attack) {
 		case punch:
+			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(PUNCH_DMG);
 			}
 		break;
 		case kick:
+			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	
