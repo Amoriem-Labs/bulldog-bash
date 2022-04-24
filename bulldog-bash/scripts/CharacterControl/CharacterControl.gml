@@ -1,6 +1,4 @@
 function CharacterControl(){
-	show_debug_message("y = " + string(y));
-	//show_debug_message("canMove = " + string(canMove));
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -63,14 +61,14 @@ function CharacterControl(){
 		}
 	}
 	
-	if (kc(fly) && fuel > 0) {
+	if (kc(up) && jumps_left <= 0 && fuel > 0) {
 		phy_speed_y = FLY_SPEED;
 		fuel -= FUEL_DRAIN;
 		state = STATE_FLY;
-		canAttack = false;
-	} else if (!kc(fly)) {
-		canAttack = true;
-		state = STATE_FREE;
+	} else if (!kc(up)) {
+		if (kcr(up)) {
+			state = STATE_FREE;
+		}
 		if (fuel < MAX_FUEL) {
 			fuel += FUEL_REGEN;
 		}

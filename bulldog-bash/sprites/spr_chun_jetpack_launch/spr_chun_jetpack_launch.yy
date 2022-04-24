@@ -35,7 +35,7 @@
     "spriteId": {"name":"spr_chun_jetpack_launch","path":"sprites/spr_chun_jetpack_launch/spr_chun_jetpack_launch.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
