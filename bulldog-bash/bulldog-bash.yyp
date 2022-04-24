@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"spr_salovey_idle","path":"sprites/spr_salovey_idle/spr_salovey_idle.yy",},"order":1,},
     {"id":{"name":"spr_battle_UI","path":"sprites/spr_battle_UI/spr_battle_UI.yy",},"order":2,},
-    {"id":{"name":"CheckDeath","path":"scripts/CheckDeath/CheckDeath.yy",},"order":6,},
+    {"id":{"name":"ResetChar","path":"scripts/ResetChar/ResetChar.yy",},"order":6,},
     {"id":{"name":"spr_chun_char","path":"sprites/spr_chun_char/spr_chun_char.yy",},"order":3,},
     {"id":{"name":"spr_health_right","path":"sprites/spr_health_right/spr_health_right.yy",},"order":1,},
     {"id":{"name":"AnimationControl","path":"scripts/AnimationControl/AnimationControl.yy",},"order":2,},
@@ -99,7 +99,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.3.0.624",
   },
   "resourceVersion": "1.5",
   "name": "bulldog-bash",

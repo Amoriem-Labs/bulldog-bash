@@ -95,19 +95,20 @@ function handleSuccessfulAttack(attack) {
 		case punch:
 			with opponent {
 				LoseHealth(PUNCH_DMG);
-				if (CheckDeath() == 1) {
-					with ownSelf win_counter += 1;
-				}
 			}
 		break;
 		case kick:
 			with opponent {
 				LoseHealth(KICK_DMG);
-				if (CheckDeath() == 1) {
-					with ownSelf win_counter += 1;
-				}
 			}
-		break;
+			
+			
+		break
+	}
+	if (opponent.myHealth <= 0) {
+		ownSelf.win_counter += 1;
+		ResetChar(ownSelf);
+		ResetChar(opponent);
 	}
 }
 
