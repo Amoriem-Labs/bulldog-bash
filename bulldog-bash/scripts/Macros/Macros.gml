@@ -35,6 +35,7 @@
 #macro STATE_BLOCK 3
 #macro STATE_FDASH 4
 #macro STATE_BDASH 5
+#macro STATE_SPECIAL 6
 #endregion
 
 #region //Attack Damage

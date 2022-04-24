@@ -42,6 +42,9 @@ function AnimationControl(){
 			fdash = false; 
 			bdash = false;
 			break;
+		
+		case STATE_SPECIAL:
+			sprite_index = sp_special;
 	}
 }
 
