@@ -49,8 +49,43 @@ function CharacterControl(){
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
 		} else if (kcp(spclAtk)) {
-			if (distance_to_object(opponent) <= SPCL_RADIUS) {
-				handleSuccessfulAttack(spclAtk);
+			if (specialCooldown == 0) {
+				setAnimationState(STATE_SPECIAL);
+				if (character == CHAR_SALOVEY) {
+					// Book is just a garden-variety attack, but with a delay!
+					ScheduleTask(function () {
+						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+							handleSuccessfulAttack(spclAtk);
+						}
+					}, 800);
+					specialCooldown = SALOVEY_SPCL_COOLDOWN;
+					// TODO: SFX
+				} else if (character == CHAR_CHUN) {
+					// Fire the projectile
+					// The projectile will then check for collisions
+					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
+					// But it'll call it from Chun to his opponent!
+					with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
+						var flavor = choose(1, 2, 3);
+						switch (flavor) {
+							case 1:
+								// TODO: SFX
+								sprite_index = spr_chunproj_nopeace;
+							break;
+							case 2:
+								// TODO: SFX
+								sprite_index = spr_chunproj_overcome;
+							break;
+							case 3:
+								// TODO: SFX
+								sprite_index = spr_chunproj_renouncegod;
+							break;
+						}
+						dir = (other.opponent.x > x) ? 1 : -1;
+						origin = other;
+					}
+					specialCooldown = CHUN_SPCL_COOLDOWN
+				}
 			}
 		} else {
 			atk_keypress_registered = false;
@@ -61,6 +96,9 @@ function CharacterControl(){
 		}
 	}
 	
+	if (specialCooldown > 0) {
+		specialCooldown --;
+	}
 	if (kc(up) && jumps_left <= 0 && fuel > 0) {
 		phy_speed_y = FLY_SPEED;
 		fuel -= FUEL_DRAIN;
@@ -115,7 +153,18 @@ function handleSuccessfulAttack(attack) {
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	
-		break
+		break;
+		case spclAtk:
+			if (character == CHAR_SALOVEY) {
+				with opponent {
+					LoseHealth(SPCL_SALOVEY_DMG);
+				}
+			} else if (character == CHAR_CHUN) {
+				with opponent {
+					LoseHealth(SPCL_CHUN_DMG);
+				}
+			}
+		break;
 	}
 	if (opponent.myHealth <= 0) {
 		win_counter += 1;

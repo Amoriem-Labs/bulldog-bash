@@ -36,7 +36,8 @@
 #macro STATE_BLOCK 3
 #macro STATE_FDASH 4
 #macro STATE_BDASH 5
-#macro STATE_FLY 6
+#macro STATE_SPECIAL 6
+#macro STATE_FLY 7
 #endregion
 
 #region //Attack Damage
@@ -44,10 +45,14 @@
 #macro PUNCH_RADIUS 50
 #macro KICK_DMG 10
 #macro KICK_RADIUS 65
-#macro SPCL_ATK_DMG 20
-#macro SPCL_RADIUS 1000
+#macro SPCL_SALOVEY_DMG 20
+#macro SPCL_SALOVEY_RADIUS 65
+#macro SPCL_CHUN_DMG 20
+#macro SPCL_CHUN_RADIUS 20
 #macro GLOBAL_ATTACK_COOLDOWN 300
 #macro GLOBAL_MOVE_COOLDOWN 170
+#macro CHUN_SPCL_COOLDOWN 100
+#macro SALOVEY_SPCL_COOLDOWN 100
 #endregion
 
 #region //Jetpack constants
