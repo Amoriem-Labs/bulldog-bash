@@ -60,6 +60,7 @@ with p1
 	kick = ord ("T");
 	spclAtk = ord ("Y");
 	block = ord ("C");
+	fly = ord("Q");
 	pause_key = vk_escape;
 }
 	
@@ -74,6 +75,7 @@ with p2
 	kick = ord ("M");
 	spclAtk = ord (">");
 	block = ord ("<");
+	fly = ord("J");
 	pause_key = ord ("P");
 }
 
