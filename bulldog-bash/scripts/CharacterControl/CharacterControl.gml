@@ -60,6 +60,7 @@ function CharacterControl(){
 						}
 					}, 800);
 					specialCooldown = SALOVEY_SPCL_COOLDOWN;
+					// TODO: SFX
 				} else if (character == CHAR_CHUN) {
 					// Fire the projectile
 					// The projectile will then check for collisions
@@ -69,12 +70,15 @@ function CharacterControl(){
 						var flavor = choose(1, 2, 3);
 						switch (flavor) {
 							case 1:
+								// TODO: SFX
 								sprite_index = spr_chunproj_nopeace;
 							break;
 							case 2:
+								// TODO: SFX
 								sprite_index = spr_chunproj_overcome;
 							break;
 							case 3:
+								// TODO: SFX
 								sprite_index = spr_chunproj_renouncegod;
 							break;
 						}
