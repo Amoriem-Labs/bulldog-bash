@@ -49,6 +49,8 @@
 #macro SPCL_CHUN_RADIUS 20
 #macro GLOBAL_ATTACK_COOLDOWN 300
 #macro GLOBAL_MOVE_COOLDOWN 170
+#macro CHUN_SPCL_COOLDOWN 100
+#macro SALOVEY_SPCL_COOLDOWN 100
 #endregion
 
 #region //char select

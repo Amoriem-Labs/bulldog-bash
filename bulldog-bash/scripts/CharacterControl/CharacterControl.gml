@@ -59,12 +59,16 @@ function CharacterControl(){
 							handleSuccessfulAttack(spclAtk);
 						}
 					}, 800);
-					specialCooldown = 100;
+					specialCooldown = SALOVEY_SPCL_COOLDOWN;
 				} else if (character == CHAR_CHUN) {
 					// Fire the projectile
 					// The projectile will then check for collisions
 					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
 					// But it'll call it from Chun to his opponent!
+					var projectile = instance_create_layer(x, y - 150, "Instances", obj_chun_projectile);
+					projectile.dir = (opponent.x > x) ? 1 : -1;
+					projectile.origin = self;
+					specialCooldown = CHUN_SPCL_COOLDOWN
 				}
 			}
 		} else {
