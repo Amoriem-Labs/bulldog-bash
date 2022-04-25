@@ -39,14 +39,14 @@ function CharacterControl(){
 		var atk_keypress_registered = true;
 		if (kcp(punch)) {
 			setAnimationState(STATE_PUNCH);
-			if (distance_to_object(opponent) <= PUNCH_RADIUS) {
+			/*if (distance_to_object(opponent) <= PUNCH_RADIUS) {
 				handleSuccessfulAttack(punch);
-			}
+			}*/
 		} else if (kcp(kick)) {
 			setAnimationState(STATE_KICK);
-			if (distance_to_object(opponent) <= KICK_RADIUS) {
+			/*if (distance_to_object(opponent) <= KICK_RADIUS) {
 				handleSuccessfulAttack(kick);
-			}
+			}*/
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
 		} else if (kcp(spclAtk)) {

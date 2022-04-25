@@ -42,6 +42,8 @@ function AnimationControl(){
 			fdash = false; 
 			bdash = false;
 			break;
+		case STATE_STUN:
+			sprite_index = sp_
 	}
 }
 

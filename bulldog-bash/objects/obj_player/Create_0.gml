@@ -16,6 +16,12 @@ canMove = true;
 // Player-specific instance variable for health
 myHealth = 100;
 
+// Hurtbox
+hurtbox = CreateHurtbox(80,160,-40,-160); //width, height, xoffset, yoffset
+
+// Hitbox to carry
+hitbox = noone;
+
 //-----------------------------FOR DASHING--------------------------------//
 dashReset();
 fdash = false; //rightward dashing movements (sorry for bad naming)
