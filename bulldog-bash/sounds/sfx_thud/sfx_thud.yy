@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_punch.mp3",
-  "duration": 0.496327,
+  "soundFile": "sfx_thud.mp3",
+  "duration": 0.365714,
   "parent": {
     "name": "player",
     "path": "folders/Sounds/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_punch",
+  "name": "sfx_thud",
   "tags": [],
   "resourceType": "GMSound",
 }

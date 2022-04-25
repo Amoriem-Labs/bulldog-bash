@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_punch.mp3",
+  "soundFile": "sfx_punch_old.mp3",
   "duration": 0.496327,
   "parent": {
-    "name": "player",
-    "path": "folders/Sounds/player.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_punch",
+  "name": "sfx_punch_old",
   "tags": [],
   "resourceType": "GMSound",
 }
