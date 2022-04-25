@@ -9,10 +9,11 @@
 #macro WALK_SPD 4.1 //was 3
 #macro SPRINT_SPD 8
 #macro JUMP_FORCE -38
+#macro FLY_SPEED -6.1
 #macro DASH_TIMEPAUSE 10 //# fps allowed between dashing pause
 #macro SHADOW_TIMER 10
 #macro FALL_COEF 1
-#macro N_JUMPS 10
+#macro N_JUMPS 2
 #macro HEALTH_FLASH_SPEED 3
 #macro HEALTH_NUM_FLASHES 0
 #macro HEALTH_LOSS_STICK_TIME 30
@@ -35,6 +36,7 @@
 #macro STATE_BLOCK 3
 #macro STATE_FDASH 4
 #macro STATE_BDASH 5
+#macro STATE_FLY 6
 #endregion
 
 #region //Attack Damage
@@ -48,6 +50,11 @@
 #macro GLOBAL_MOVE_COOLDOWN 170
 #endregion
 
+#region //Jetpack constants
+#macro MAX_FUEL 100
+#macro FUEL_DRAIN 1
+#macro FUEL_REGEN 10
+#endregion
 #region //char select
 #macro STATE_CHAR_SELECT 0
 #macro STATE_STAGE_SELECT 1
