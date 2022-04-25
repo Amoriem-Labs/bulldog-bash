@@ -65,9 +65,22 @@ function CharacterControl(){
 					// The projectile will then check for collisions
 					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
 					// But it'll call it from Chun to his opponent!
-					var projectile = instance_create_layer(x, y - 150, "Instances", obj_chun_projectile);
-					projectile.dir = (opponent.x > x) ? 1 : -1;
-					projectile.origin = self;
+					with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
+						var flavor = choose(1, 2, 3);
+						switch (flavor) {
+							case 1:
+								sprite_index = spr_chunproj_nopeace;
+							break;
+							case 2:
+								sprite_index = spr_chunproj_overcome;
+							break;
+							case 3:
+								sprite_index = spr_chunproj_renouncegod;
+							break;
+						}
+						dir = (other.opponent.x > x) ? 1 : -1;
+						origin = other;
+					}
 					specialCooldown = CHUN_SPCL_COOLDOWN
 				}
 			}
