@@ -7,6 +7,8 @@ opponent = noone;
 
 state = STATE_FREE;
 
+frozen = false
+
 // Controls whether a player is able to attack
 canAttack = true;
 
@@ -36,3 +38,5 @@ depth = -100;
 //-----------------------------FOR JETPACK--------------------------------//
 isFlying = false;
 fuel = MAX_FUEL;
+
+

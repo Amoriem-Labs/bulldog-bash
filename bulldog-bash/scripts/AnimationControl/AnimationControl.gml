@@ -45,6 +45,7 @@ function AnimationControl(){
 		
 		case STATE_SPECIAL:
 			sprite_index = sp_special;
+			break;
 			
 		case STATE_FLY:
 			// placeholder, need jetpack sprite

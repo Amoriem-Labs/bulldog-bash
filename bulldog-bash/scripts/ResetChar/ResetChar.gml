@@ -9,5 +9,8 @@ function ResetChar(player){
 		player.phy_angular_velocity = 0;
 		player.phy_position_x = player.startX;
 		player.phy_position_y = player.startY;
+		player.canMove=true;
+		player.canAttack=true;
+		player.frozen=false;
 		show_debug_message("I died!");
 }

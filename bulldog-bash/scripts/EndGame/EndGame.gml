@@ -12,8 +12,12 @@ function EndGame(){
 	//win_splash = layer_instance_get_instance(inst_win_splash)
 	if winner == p2 {
 		inst_win_splash.sprite_index = spr_p2_wins;
+		voiceline = snd_p2_wins
+	}
+	else {
+		voiceline = snd_p1_wins
 	}
 	inst_win_splash.visible = true;
-	show_debug_message("alarm set");
-	alarm_set(0, 240);
+	audio_play_sound(voiceline, 1, false);
+	alarm_set(0, (audio_sound_length(voiceline) + 2.5)*room_speed);
 }
