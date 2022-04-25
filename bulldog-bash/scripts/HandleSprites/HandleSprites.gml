@@ -13,6 +13,8 @@ switch (argument0) {
 		sp_dash_forward = spr_chun_dash_forward; 
 		sp_dash_backward = spr_chun_dash_backward;
 		sp_special = spr_chun_special;
+		sp_jetpack_air = spr_chun_jetpack_air
+		sp_jetpack_launch = spr_chun_jetpack_launch
 		sprite_index = sp_idle;
 	break;
 	
@@ -31,6 +33,8 @@ switch (argument0) {
 		sp_dash_forward = spr_salovey_dash_forward;
 		sp_dash_backward = spr_salovey_dash_backward;
 		sp_special = spr_salovey_special;
+		sp_jetpack_air = spr_salovey_jetpack_air
+		sp_jetpack_launch = spr_salovey_jetpack_launch
 		sprite_index = sp_idle;
 	break;
 	

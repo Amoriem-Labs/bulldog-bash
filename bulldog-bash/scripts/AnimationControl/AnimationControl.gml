@@ -45,6 +45,15 @@ function AnimationControl(){
 		
 		case STATE_SPECIAL:
 			sprite_index = sp_special;
+			
+		case STATE_FLY:
+			// placeholder, need jetpack sprite
+			//sprite_index = sp_idle;
+			sprite_index = sp_jetpack_air;
+			// unsure if these are necessary, just matching above blocks
+			fdash = false;
+			bdash = false;
+			break;
 	}
 }
 

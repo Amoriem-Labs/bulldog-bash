@@ -1,5 +1,4 @@
 function CharacterControl(){
-	// show_debug_message("canMove = " + string(canMove));
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -100,6 +99,19 @@ function CharacterControl(){
 	if (specialCooldown > 0) {
 		specialCooldown --;
 	}
+	if (kc(up) && jumps_left <= 0 && fuel > 0) {
+		phy_speed_y = FLY_SPEED;
+		fuel -= FUEL_DRAIN;
+		state = STATE_FLY;
+	} else if (!kc(up)) {
+		if (kcr(up)) {
+			state = STATE_FREE;
+		}
+		if (fuel < MAX_FUEL) {
+			fuel += FUEL_REGEN;
+		}
+	}
+	
 	image_xscale = (opponent.x > x) ? 1: -1;
 }
 
@@ -121,7 +133,7 @@ function beginAttackCooldown() {
 function beginMoveCooldown() {
 	// Disable movement for a brief duration
 	canMove = false;
-	show_debug_message("canMove = " + string(canMove));
+	//show_debug_message("canMove = " + string(canMove));
 	// Set a timer to reenable movement after 50 milliseconds
 	ScheduleTask(function() {
 		canMove = true;
@@ -131,11 +143,13 @@ function beginMoveCooldown() {
 function handleSuccessfulAttack(attack) {
 	switch (attack) {
 		case punch:
+			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(PUNCH_DMG);
 			}
 		break;
 		case kick:
+			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	

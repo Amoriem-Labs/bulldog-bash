@@ -60,6 +60,7 @@ with p1
 	kick = ord ("T");
 	spclAtk = ord ("Y");
 	block = ord ("C");
+	fly = ord("Q");
 	pause_key = vk_escape;
 }
 	
