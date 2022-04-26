@@ -52,6 +52,8 @@ bgm_choices = [roma_1, roma_3, roma_5, roma_6, roma_7]
 
 bgm_choice = bgm_choices[irandom(array_length(bgm_choices) - 1)]
 
+audio_play_sound(snd_round_start, 1, false);
+
 alarm_set(1, audio_sound_length(bgm_choice)*room_speed);
 
 bgm = audio_play_sound(bgm_choice, 0, true);
