@@ -67,6 +67,7 @@ function CharacterControl(){
 					// Book is just a garden-variety attack, but with a delay!
 					ScheduleTask(function () {
 						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+							audio_play_sound(hurt, 1, false);
 							handleSuccessfulAttack(spclAtk);
 						}
 					}, 800);
