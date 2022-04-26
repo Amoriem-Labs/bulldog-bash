@@ -7,8 +7,13 @@ opponent = noone;
 
 state = STATE_FREE;
 
+frozen = false
+
 // Controls whether a player is able to attack
 canAttack = true;
+
+// Controls whether a player can use their special
+specialCooldown = 100;
 
 // Controls whether a player can move
 canMove = true;
@@ -35,3 +40,9 @@ just_jumped = false;
 //this makes char over interfaces layer, which has a depth of 0
 depth = -100;
 //also change floor depth so char is over floor ;DDDD
+
+//-----------------------------FOR JETPACK--------------------------------//
+isFlying = false;
+fuel = MAX_FUEL;
+
+

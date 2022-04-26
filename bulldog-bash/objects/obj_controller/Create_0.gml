@@ -1,6 +1,6 @@
 /// @description Insert description here
 // for pause menu: set this room persistent
-room_persistent = true;
+//room_persistent = true;
 
 // player spawn
 
@@ -23,6 +23,8 @@ p2.healthBar = instance_create_layer(1179, 135, "Interfaces", obj_healthBar);
 p2.healthBar.owner = p2;
 p2.healthBar.xscaling = -1;
 
+game_ended = false
+
 p1.win_counter = 0;
 p2.win_counter = 0;
 
@@ -38,6 +40,15 @@ show_debug_message("created controller!")
 p1.character = global.p1_char;
 p2.character = global.p2_char;
 
+global.round_win_quotes =
+[
+	[snd_ratio, duck, overcome],
+	[okboomer, basement_victory, welcome]
+];
+
+bgm_choices = [roma_1, roma_3, roma_5, roma_6, roma_7]
+
+bgm = audio_play_sound(bgm_choices[irandom(array_length(bgm_choices) - 1)], 0, true);
 
 // Whether the game is paused
 paused = false;
@@ -54,10 +65,10 @@ with p1
 	right = ord ("D");
 	up = ord ("W");
 	down = ord ("S");
-	punch = ord ("R");
-	kick = ord ("T");
-	spclAtk = ord ("Y");
-	block = ord ("C");
+	punch = ord ("E");
+	kick = ord ("R");
+	spclAtk = ord ("Q");
+	block = ord ("X");
 	pause_key = vk_escape;
 }
 	
@@ -68,10 +79,10 @@ with p2
 	right = vk_right;
 	up = vk_up;
 	down = vk_down;
-	punch = ord ("N");
-	kick = ord ("M");
-	spclAtk = ord (">");
-	block = ord ("<");
+	punch = 190; //.
+	kick = 188; //,
+	spclAtk = ord("K"); 
+	block = ord ("L");
 	pause_key = ord ("P");
 }
 

@@ -1,5 +1,7 @@
 function CharacterControl(){
-	// show_debug_message("canMove = " + string(canMove));
+	if frozen {
+		return
+	}
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -50,8 +52,48 @@ function CharacterControl(){
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
 		} else if (kcp(spclAtk)) {
-			if (distance_to_object(opponent) <= SPCL_RADIUS) {
-				handleSuccessfulAttack(spclAtk);
+			if (specialCooldown == 0) {
+				setAnimationState(STATE_SPECIAL);
+				if (character == CHAR_SALOVEY) {
+					ScheduleTask(function() {
+						audio_play_sound(special_salovey, 1, false);
+					}, 400);
+					// Book is just a garden-variety attack, but with a delay!
+					ScheduleTask(function () {
+						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+							audio_play_sound(hurt, 1, false);
+							handleSuccessfulAttack(spclAtk);
+						}
+					}, 800);
+					specialCooldown = SALOVEY_SPCL_COOLDOWN;
+					// TODO: SFX
+				} else if (character == CHAR_CHUN) {
+					// Fire the projectile
+					// The projectile will then check for collisions
+					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
+					// But it'll call it from Chun to his opponent!
+					audio_play_sound(special_chun, 1, false);
+					with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
+						var flavor = choose(1, 2, 3);
+						switch (flavor) {
+							case 1:
+								audio_play_sound(nopeace, 1, false);
+								sprite_index = spr_chunproj_nopeace;
+							break;
+							case 2:
+								audio_play_sound(overcome, 1, false);
+								sprite_index = spr_chunproj_overcome;
+							break;
+							case 3:
+								audio_play_sound(renouncegod, 1, false);
+								sprite_index = spr_chunproj_renouncegod;
+							break;
+						}
+						dir = (other.opponent.x > x) ? 1 : -1;
+						origin = other;
+					}
+					specialCooldown = CHUN_SPCL_COOLDOWN
+				}
 			}
 		} else {
 			atk_keypress_registered = false;
@@ -59,6 +101,22 @@ function CharacterControl(){
 		if (atk_keypress_registered) {
 			beginAttackCooldown();
 			beginMoveCooldown();
+		}
+	}
+	
+	if (specialCooldown > 0) {
+		specialCooldown --;
+	}
+	if (kc(up) && jumps_left <= 0 && fuel > 0) {
+		phy_speed_y = FLY_SPEED;
+		fuel -= FUEL_DRAIN;
+		state = STATE_FLY;
+	} else if (!kc(up)) {
+		if (kcr(up)) {
+			state = STATE_FREE;
+		}
+		if (fuel < MAX_FUEL) {
+			fuel += FUEL_REGEN;
 		}
 	}
 	
@@ -83,7 +141,7 @@ function beginAttackCooldown() {
 function beginMoveCooldown() {
 	// Disable movement for a brief duration
 	canMove = false;
-	show_debug_message("canMove = " + string(canMove));
+	//show_debug_message("canMove = " + string(canMove));
 	// Set a timer to reenable movement after 50 milliseconds
 	ScheduleTask(function() {
 		canMove = true;
@@ -101,12 +159,33 @@ function handleSuccessfulAttack(attack) {
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	
-		break
+		break;
+		case spclAtk:
+			if (character == CHAR_SALOVEY) {
+				with opponent {
+					LoseHealth(SPCL_SALOVEY_DMG);
+				}
+			} else if (character == CHAR_CHUN) {
+				with opponent {
+					LoseHealth(SPCL_CHUN_DMG);
+				}
+			}
+		break;
 	}
 	if (opponent.myHealth <= 0) {
-		win_counter += 1;
-		ResetChar(ownSelf);
-		ResetChar(opponent);
+		quotes = global.round_win_quotes[character]
+		quote = quotes[irandom(array_length(quotes) - 1)];
+		audio_play_sound(quote, 1, false);
+		frozen = true
+		opponent.frozen = true
+		ScheduleTask(function() {
+			win_counter += 1;
+			if win_counter < 2 {
+				ResetChar(ownSelf);
+				ResetChar(opponent);
+			}
+		}, audio_sound_length(quote)*1000 + 400);
+		
 	}
 }
 
