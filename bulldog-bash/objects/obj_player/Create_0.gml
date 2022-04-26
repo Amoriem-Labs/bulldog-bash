@@ -39,4 +39,4 @@ depth = -100;
 isFlying = false;
 fuel = MAX_FUEL;
 
-
+jetpack_sound_playing = false;

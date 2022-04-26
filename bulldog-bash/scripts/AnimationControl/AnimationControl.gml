@@ -70,6 +70,7 @@ function CheckDashing() {
 	else if (FdashingPrep == true) { //in rightward dashing count!
 		if(kcp(right)) { //dash pressed again during right count
 			fdash = true;
+			audio_play_sound(snd_dash, 1, false);
 			image_index = 0;
 			if(fdash == false) { //set dash to false at the end of animation
 				dashReset(); 
@@ -84,6 +85,7 @@ function CheckDashing() {
 	else if (BdashingPrep == true) { //in leftward dashing count!
 		if(kcp(left)) { //dash pressed again during left count
 			bdash = true;
+			audio_play_sound(snd_dash, 1, false);
 			image_index = 0;
 			if(bdash == false) { //set dash to false at the end of animation
 				dashReset();

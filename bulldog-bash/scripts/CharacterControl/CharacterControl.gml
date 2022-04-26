@@ -29,6 +29,7 @@ function CharacterControl(){
 				just_jumped = true;
 				jumps_left -= 1;
 				phy_speed_y = JUMP_FORCE*(kc(up));
+				//audio_play_sound(snd_jump, 1, false);
 			}
 			if (kcp(down)) {
 				phy_speed_y = FALL_COEF*distance_to_object(obj_floor)*(kc(down));
@@ -46,6 +47,7 @@ function CharacterControl(){
 				handleSuccessfulAttack(punch);
 			}
 			else {
+				audio_play_sound(snd_missed_punch, 1, false);
 			}
 		} else if (kcp(kick)) {
 			setAnimationState(STATE_KICK);
@@ -54,6 +56,7 @@ function CharacterControl(){
 				handleSuccessfulAttack(kick);
 			}
 			else {
+				audio_play_sound(snd_missed_kick, 1, false);
 			}
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
@@ -117,6 +120,11 @@ function CharacterControl(){
 		phy_speed_y = FLY_SPEED;
 		fuel -= FUEL_DRAIN;
 		state = STATE_FLY;
+		if !jetpack_sound_playing {
+			jetpack_sound_playing = true
+			audio_play_sound(snd_jetpack, 1, false);
+			alarm_set(3, audio_sound_length(snd_jetpack)*room_speed);
+		}
 	} else if (!kc(up)) {
 		if (kcr(up)) {
 			state = STATE_FREE;
@@ -189,6 +197,7 @@ function handleSuccessfulAttack(attack) {
 			if win_counter < 2 {
 				ResetChar(ownSelf);
 				ResetChar(opponent);
+				audio_play_sound(snd_round_start, 1, false);
 			}
 		}, audio_sound_length(quote)*1000 + 400);
 		

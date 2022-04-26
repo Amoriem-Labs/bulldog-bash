@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "fight_splash",
+    "path": "folders/Objects/fight_splash.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_fight_portrait",
