@@ -4,3 +4,11 @@
 # ignore documentation files
 README.md
 bulldog-bash.png
+
+#ignore builds
+exe/
+*.zip
+
+#ignore raw sprites
+select-sprites/
+win-sprites/
