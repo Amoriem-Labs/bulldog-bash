@@ -47,6 +47,10 @@ function AnimationControl(){
 			sprite_index = sp_special;
 			break;
 			
+		case STATE_STUN:
+			sprite_index = sp_knockback;
+			break;
+			
 		case STATE_FLY:
 			// placeholder, need jetpack sprite
 			//sprite_index = sp_idle;

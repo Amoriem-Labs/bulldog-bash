@@ -1,3 +1,3 @@
 /// @description die
 
-instance_destroy()
+instance_destroy();

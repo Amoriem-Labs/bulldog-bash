@@ -10,4 +10,4 @@ yOffset = 0;
 damage = 0;
 hitStun = 0; //implement later
 //ignore = false; irrelevant I think
-ignoreList = []
+ignoreList = [];

@@ -9,6 +9,8 @@ state = STATE_FREE;
 
 frozen = false
 
+stunned = 0;
+
 // Controls whether a player is able to attack
 canAttack = true;
 

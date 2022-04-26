@@ -2,6 +2,13 @@ function CharacterControl(){
 	if frozen {
 		return
 	}
+	if(stunned > 0){
+		stunned -= 1;
+		if(stunned == 0){
+			setAnimationState(STATE_FREE);
+		}
+		return;
+	}
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -59,21 +66,19 @@ function CharacterControl(){
 						audio_play_sound(special_salovey, 1, false);
 					}, 400);
 					// Book is just a garden-variety attack, but with a delay!
-					ScheduleTask(function () {
+					/*ScheduleTask(function () {
 						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
 							audio_play_sound(hurt, 1, false);
 							handleSuccessfulAttack(spclAtk);
 						}
-					}, 800);
+					}, 800);*/
 					specialCooldown = SALOVEY_SPCL_COOLDOWN;
 					// TODO: SFX
 				} else if (character == CHAR_CHUN) {
 					// Fire the projectile
-					// The projectile will then check for collisions
-					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
-					// But it'll call it from Chun to his opponent!
+					// The projectile will then check for collisions with its own hitbox
 					audio_play_sound(special_chun, 1, false);
-					with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
+					/*with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
 						var flavor = choose(1, 2, 3);
 						switch (flavor) {
 							case 1:
@@ -91,8 +96,8 @@ function CharacterControl(){
 						}
 						dir = (other.opponent.x > x) ? 1 : -1;
 						origin = other;
-					}
-					specialCooldown = CHUN_SPCL_COOLDOWN
+					}*/
+					specialCooldown = CHUN_SPCL_COOLDOWN;
 				}
 			}
 		} else {

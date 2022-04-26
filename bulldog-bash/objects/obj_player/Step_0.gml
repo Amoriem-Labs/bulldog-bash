@@ -19,7 +19,7 @@ if (!obj_controller.paused) {
 			y = other.y + yOffset;
 		}
 	}
-	// cursed hitbox maker function
+	// checks for attack frame to create hitbox/projectile
 	MakeAttack();
 
 	//-----------------------------FOR DASHING--------------------------------//
