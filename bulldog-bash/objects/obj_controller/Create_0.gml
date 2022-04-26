@@ -4,6 +4,8 @@
 
 // player spawn
 
+randomize()
+
 p1 = instance_create_layer(room_width/2 - STARTING_DISTANCE/2, 900, "Instances", obj_player);
 p2 = instance_create_layer(room_width/2 + STARTING_DISTANCE/2, 900, "Instances", obj_player);
 p2.image_xscale = -1;
@@ -48,7 +50,11 @@ global.round_win_quotes =
 
 bgm_choices = [roma_1, roma_3, roma_5, roma_6, roma_7]
 
-bgm = audio_play_sound(bgm_choices[irandom(array_length(bgm_choices) - 1)], 0, true);
+bgm_choice = bgm_choices[irandom(array_length(bgm_choices) - 1)]
+
+alarm_set(1, audio_sound_length(bgm_choice)*room_speed);
+
+bgm = audio_play_sound(bgm_choice, 0, true);
 
 // Whether the game is paused
 paused = false;
