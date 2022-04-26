@@ -40,6 +40,15 @@ show_debug_message("created controller!")
 p1.character = global.p1_char;
 p2.character = global.p2_char;
 
+global.round_win_quotes =
+[
+	[snd_ratio, duck, overcome],
+	[okboomer, basement_victory, welcome]
+];
+
+bgm_choices = [roma_1, roma_3, roma_5, roma_6, roma_7]
+
+bgm = audio_play_sound(bgm_choices[irandom(array_length(bgm_choices) - 1)], 0, true);
 
 // Whether the game is paused
 paused = false;
@@ -56,11 +65,10 @@ with p1
 	right = ord ("D");
 	up = ord ("W");
 	down = ord ("S");
-	punch = ord ("R");
-	kick = ord ("T");
-	spclAtk = ord ("Y");
-	block = ord ("C");
-	fly = ord("Q");
+	punch = ord ("E");
+	kick = ord ("R");
+	spclAtk = ord ("Q");
+	block = ord ("X");
 	pause_key = vk_escape;
 }
 	
@@ -71,10 +79,10 @@ with p2
 	right = vk_right;
 	up = vk_up;
 	down = vk_down;
-	punch = ord ("N");
-	kick = ord ("M");
-	spclAtk = ord ("K");
-	block = ord ("J");
+	punch = 190; //.
+	kick = 188; //,
+	spclAtk = ord("K"); 
+	block = ord ("L");
 	pause_key = ord ("P");
 }
 

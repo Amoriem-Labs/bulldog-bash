@@ -1,4 +1,7 @@
 function CharacterControl(){
+	if frozen {
+		return
+	}
 	if (canMove) {
 		// free state; all movement is possible
 		if (fdash == true) { //hostage other commands, prio dash
@@ -39,12 +42,18 @@ function CharacterControl(){
 		if (kcp(punch)) {
 			setAnimationState(STATE_PUNCH);
 			if (distance_to_object(opponent) <= PUNCH_RADIUS) {
+				audio_play_sound(snd_punch, 1, false);
 				handleSuccessfulAttack(punch);
+			}
+			else {
 			}
 		} else if (kcp(kick)) {
 			setAnimationState(STATE_KICK);
 			if (distance_to_object(opponent) <= KICK_RADIUS) {
+				audio_play_sound(snd_kick, 1, false);
 				handleSuccessfulAttack(kick);
+			}
+			else {
 			}
 		} else if (kcp(block)) {
 			setAnimationState(STATE_BLOCK);
@@ -52,9 +61,13 @@ function CharacterControl(){
 			if (specialCooldown == 0) {
 				setAnimationState(STATE_SPECIAL);
 				if (character == CHAR_SALOVEY) {
+					ScheduleTask(function() {
+						audio_play_sound(special_salovey, 1, false);
+					}, 400);
 					// Book is just a garden-variety attack, but with a delay!
 					ScheduleTask(function () {
 						if (distance_to_object(opponent) <= SPCL_SALOVEY_RADIUS) {
+							audio_play_sound(hurt, 1, false);
 							handleSuccessfulAttack(spclAtk);
 						}
 					}, 800);
@@ -65,19 +78,20 @@ function CharacterControl(){
 					// The projectile will then check for collisions
 					// Upon a collision, it will call handleSuccessfulAttack(spclAtk);
 					// But it'll call it from Chun to his opponent!
+					audio_play_sound(special_chun, 1, false);
 					with (instance_create_layer(x, y - 150, "Instances", obj_chun_projectile)) {
 						var flavor = choose(1, 2, 3);
 						switch (flavor) {
 							case 1:
-								// TODO: SFX
+								audio_play_sound(nopeace, 1, false);
 								sprite_index = spr_chunproj_nopeace;
 							break;
 							case 2:
-								// TODO: SFX
+								audio_play_sound(overcome, 1, false);
 								sprite_index = spr_chunproj_overcome;
 							break;
 							case 3:
-								// TODO: SFX
+								audio_play_sound(renouncegod, 1, false);
 								sprite_index = spr_chunproj_renouncegod;
 							break;
 						}
@@ -143,13 +157,11 @@ function beginMoveCooldown() {
 function handleSuccessfulAttack(attack) {
 	switch (attack) {
 		case punch:
-			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(PUNCH_DMG);
 			}
 		break;
 		case kick:
-			audio_play_sound(sfx_punch, 1, false);
 			with opponent {
 				LoseHealth(KICK_DMG);
 			}	
@@ -167,11 +179,19 @@ function handleSuccessfulAttack(attack) {
 		break;
 	}
 	if (opponent.myHealth <= 0) {
-		win_counter += 1;
-		if win_counter < 2 {
-			ResetChar(ownSelf);
-			ResetChar(opponent);
-		}
+		quotes = global.round_win_quotes[character]
+		quote = quotes[irandom(array_length(quotes) - 1)];
+		audio_play_sound(quote, 1, false);
+		frozen = true
+		opponent.frozen = true
+		ScheduleTask(function() {
+			win_counter += 1;
+			if win_counter < 2 {
+				ResetChar(ownSelf);
+				ResetChar(opponent);
+			}
+		}, audio_sound_length(quote)*1000 + 400);
+		
 	}
 }
 

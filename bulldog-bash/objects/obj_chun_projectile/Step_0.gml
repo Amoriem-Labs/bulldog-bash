@@ -6,6 +6,7 @@ t ++;
 x += dir * exp(t / 50);
 
 if (armed && distance_to_object(origin.opponent) == 0) {
+	audio_play_sound(hurt, 1, false);
 	with (origin) {
 		handleSuccessfulAttack(spclAtk);
 	}
